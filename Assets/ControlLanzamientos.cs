@@ -8,12 +8,18 @@ public class ControlLanzamientos : MonoBehaviour
 
     public GameObject bola;
     public Rigidbody2D pivote;
+    public float tiempoQuitarSprintJoin;
+    public float tiempoFinJuego;
+
+
+
 
     private Camera camara;
     private Rigidbody2D bolaRigidbody;
     private SpringJoint2D bolaSprintJoint;
-    
-    
+
+    private bool estaArrastrando;
+
 
     void Start()
     {
@@ -26,18 +32,44 @@ public class ControlLanzamientos : MonoBehaviour
         bolaSprintJoint.connectedBody = pivote;
 
 
-    }
 
-    void Update()
+
+
+
+        void Update()
+        {
+
+            if (bolaRigidbody == null) { return; }
+
+            if (!Touchscreen.current.primaryTouch.press.isPressed)
+            {
+                if(estaArrastrando)
+
+                {
+                    LanzarBola();
+                    
+                }
+
+                estaArrastrando = false;
+
+                return;
+            }
+
+            estaArrastrando = true;
+
+            bolaRigidbody.isKinematic = true;
+
+            Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
+            Vector3 posicionMundo = camara.ScreenToViewportPoint(posicionTocar);
+        }
+
+        
+    }
+    private void LanzarBola()
     {
 
-        if(bolaRigidbody == null) { return; }
+        bolaRigidbody.isKinematic = false;
+        bolaRigidbody = null;
 
-        if(!Touchscreen.current.primaryTouch.press.isPressed)
-        {
-            return;
-        }
-        Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
-        Vector3 posicionMundo = camara.ScreenToViewportPoint(posicionTocar);             
     }
 }
