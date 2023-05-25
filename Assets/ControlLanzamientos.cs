@@ -1,22 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-//using UnityEngine.InputSystem;
+using UnityEngine.InputSystem;
 
 public class ControlLanzamientos : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public GameObject bola;
+    public Rigidbody2D pivote;
+
+    private Camera camara;
+    private Rigidbody2D bolaRigidbody;
+    private SpringJoint2D bolaSprintJoint;
+    
+    
+
     void Start()
     {
-        
+        camara = Camera.main;
+
+        bolaRigidbody = bola.GetComponent<Rigidbody2D>();
+
+        bolaSprintJoint = bola.GetComponent<SpringJoint2D>();
+
+        bolaSprintJoint.connectedBody = pivote;
+
+
     }
 
-    // Update is called once per frame
     void Update()
     {
-       // if(!TouchScreen.current.prima)
 
+        if(bolaRigidbody == null) { return; }
 
-
+        if(!Touchscreen.current.primaryTouch.press.isPressed)
+        {
+            return;
+        }
+        Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
+        Vector3 posicionMundo = camara.ScreenToViewportPoint(posicionTocar);             
     }
 }
