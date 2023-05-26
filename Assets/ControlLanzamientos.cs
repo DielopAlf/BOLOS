@@ -30,7 +30,7 @@ public class ControlLanzamientos : MonoBehaviour
         bolaSprintJoint = bola.GetComponent<SpringJoint2D>();
 
         bolaSprintJoint.connectedBody = pivote;
-
+}
 
 
 
@@ -60,16 +60,35 @@ public class ControlLanzamientos : MonoBehaviour
             bolaRigidbody.isKinematic = true;
 
             Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
-            Vector3 posicionMundo = camara.ScreenToViewportPoint(posicionTocar);
+            Vector3 posicionMundo = camara.ScreenToWorldPoint(posicionTocar);
+            bolaRigidbody.position = posicionMundo;
+        Debug.Log(posicionTocar+ " " + posicionMundo);
         }
-
         
-    }
+        
     private void LanzarBola()
     {
 
         bolaRigidbody.isKinematic = false;
         bolaRigidbody = null;
 
+        Invoke(nameof(QuitarSprintJoin), tiempoQuitarSprintJoin);
     }
+    private void QuitarSprintJoin()
+    {
+
+        bolaSprintJoint.enabled = false;
+        bolaSprintJoint = null;
+
+        Invoke(nameof(FinJuego), tiempoFinJuego);
+       
+    }
+
+    private void FinJuego()
+    {
+
+
+        Debug.Log("Fin Juego");
+    }
+
 }
