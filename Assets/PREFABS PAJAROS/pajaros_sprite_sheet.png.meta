@@ -1,0 +1,4315 @@
+fileFormatVersion: 2
+guid: 266ad43421c10b94b9c33d0cd7066a00
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 768
+        width: 38
+        height: 199
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899a277c2301932409f9502cd5acca63
+      internalID: 37850423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 814
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60c4f46d5485f5c4b90de5c147995993
+      internalID: -243331344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_2
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 814
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ecb6e2a4bb9f144f9a96f5500f47d62
+      internalID: -1464191434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_3
+      rect:
+        serializedVersion: 2
+        x: 297
+        y: 814
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ab8c55a1d005a4792a51c916613f77
+      internalID: 1318475990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_4
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 814
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9ad759cd78041c41a6bdedc06f97602
+      internalID: -446568774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_5
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 951
+        width: 33
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf038014f2449d41855806b7d4ee9fa
+      internalID: -834538314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 917
+        width: 110
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108e9c47870451241afc5c64e19cfc7f
+      internalID: 1701504526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 843
+        width: 43
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3326ad057ad6b34fa18249e3fc4a805
+      internalID: -853147846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_8
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 920
+        width: 104
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a60025f7b140bb459e1b43b6e6be07a
+      internalID: -1799783469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 928
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6de4eea501760b640b81c2cdfa70497c
+      internalID: 1293378465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 659
+        width: 326
+        height: 308
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ad45be67d1d4c342961d59321624679
+      internalID: -1817267113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 1155
+        y: 955
+        width: 118
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3ce857a30b9fe41aa72e35e38a1d09
+      internalID: 2128529407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 957
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d2dc012706d1ba4e80278cdeec554e1
+      internalID: -1544778379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1317
+        y: 963
+        width: 24
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0751230c829c0b348baf3ef74bcc1346
+      internalID: -1894100812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_14
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 947
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26395e27e269e5b46a60dd19f80fbcf9
+      internalID: -2143054475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_15
+      rect:
+        serializedVersion: 2
+        x: 1367
+        y: 913
+        width: 82
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f24e63fbc89bed6499804910a8ee53b1
+      internalID: -119025672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_16
+      rect:
+        serializedVersion: 2
+        x: 1072
+        y: 959
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80ac617658ce1634fbaa6895c84a3823
+      internalID: -745316814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_17
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 943
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e18f4caae937d44fba742deda2e9f48
+      internalID: 1388309011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 939
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a596e4bfff2cedc46b65ce9dfbe18806
+      internalID: 1715718028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_19
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 876
+        width: 16
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0b94d14e4c7e5245a5fca6168310885
+      internalID: -2089498112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_20
+      rect:
+        serializedVersion: 2
+        x: 685
+        y: 890
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9685d9e8e8348343b8addc78142509b
+      internalID: -715218365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_21
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 872
+        width: 19
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e4861f5705ab0b46b26cbaf121c9a13
+      internalID: -994515355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_22
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 838
+        width: 72
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 470f303c570258a41977f81c1a9ae659
+      internalID: -2049815427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_23
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 877
+        width: 18
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4198e803c95ce44e95da746e2849a7d
+      internalID: -845736103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_24
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 844
+        width: 68
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 733d5a3f4b7c5ec45adb18b9cb5ee701
+      internalID: 1326113634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1006
+        y: 887
+        width: 40
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47f283d0f0d880849ad1961a925ec21b
+      internalID: -1514703833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 899
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f20678fd76f91c444a02dd7b5e406946
+      internalID: -409344203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 884
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0e5c03d2904a6d4a95bf0e5f6f3584b
+      internalID: -1196747314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_28
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 844
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e63b7328d95864aa338cebb8c0e37c
+      internalID: -883713423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_29
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 830
+        width: 59
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97273c059c0a5fb4098f741ea65d4d77
+      internalID: -1342355306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_30
+      rect:
+        serializedVersion: 2
+        x: 713
+        y: 846
+        width: 35
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06d1c01ea1aedca46bb8648c514e8951
+      internalID: -845720799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_31
+      rect:
+        serializedVersion: 2
+        x: 891
+        y: 852
+        width: 33
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5642160caff5ef44c9d12ad965c5554f
+      internalID: -272725903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 843
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feaa289b283ea7443a80bceff51a9617
+      internalID: -2059519127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1062
+        y: 816
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892ecd8b4448d4a4296c8aecf24091de
+      internalID: -1844164887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_34
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 659
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 926a4f5b5e13d604a952b2570cf1d02c
+      internalID: -1100098846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_35
+      rect:
+        serializedVersion: 2
+        x: 199
+        y: 791
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a119f4d7d97e1641872e6ab11f7b417
+      internalID: -1015333371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_36
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 798
+        width: 28
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977558060f709e443b847645f6d9f07a
+      internalID: 452276885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_37
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 712
+        width: 110
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09235307d20999246b9bfc7ec74b24d3
+      internalID: 1682197343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_38
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 713
+        width: 110
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94e84d0bce2be3c48ba1d621c1266b8b
+      internalID: -521011323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_39
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 713
+        width: 110
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4dcc06225e039564e8fea4ee506b58af
+      internalID: -1232747838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_40
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 714
+        width: 98
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30efda6faf70d8c44ad664b051e5f6f3
+      internalID: -1650816660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_41
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 715
+        width: 109
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c4be1d5969064d4e8a2ac814e2b1458
+      internalID: 2084447265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_42
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 715
+        width: 109
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8460c1376242244585d5ecbee6af190
+      internalID: -33134535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_43
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 718
+        width: 84
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1df65c578b643b9419785c26f494c8a1
+      internalID: 2011010559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 731
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9856f20cf2f4574fa2ed19d551c1570
+      internalID: -944518583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_45
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 733
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505bcf55ee30a194ba0650458da1e4cb
+      internalID: 472641648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_46
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 732
+        width: 14
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b144e5e24353f0947b2ad765fe2b4a40
+      internalID: -1059447273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_47
+      rect:
+        serializedVersion: 2
+        x: 286
+        y: 744
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 505ab91eaffe94648b2687cdd50bca4a
+      internalID: -1101674298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 695
+        width: 29
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 704d43fa23b5347448e67cda90893677
+      internalID: -329265132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_49
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 705
+        width: 7
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1338022165e1d8f49932725b2a0ab6cc
+      internalID: 156510364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_50
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 704
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b6b4fc75b714c048aa1e16266703045
+      internalID: 1574137715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_51
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 691
+        width: 52
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb2cf6b3baffed4a9f50d2f3716a045
+      internalID: -1448219877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_52
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 613
+        width: 109
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521f0d94a9aa5ad4aa7a5c88afbd6553
+      internalID: -1895014677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_53
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 617
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f82ca13b330ad4c9f03e09f11a1e10
+      internalID: -1727121754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_54
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 617
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f0d505a9bb2454db8f2d35011e9c11
+      internalID: -1543364276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_55
+      rect:
+        serializedVersion: 2
+        x: 611
+        y: 617
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85b283069b67a84999185b16c82015e
+      internalID: -1916231570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_56
+      rect:
+        serializedVersion: 2
+        x: 712
+        y: 617
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cceafd9bf68ca7a4e9e107d0acde025f
+      internalID: -2116605249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_57
+      rect:
+        serializedVersion: 2
+        x: 813
+        y: 617
+        width: 98
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 283b25df6f5a38f4291951807e222c28
+      internalID: -637635343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_58
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 617
+        width: 97
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8817bce0e0041479ec11f9e1986244
+      internalID: -1001893298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 660
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb500f80b015a084f9dd160c77e52f39
+      internalID: -2070094717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_60
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 660
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fce2793448bb9043917ebb05b6d012d
+      internalID: -2097293352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_61
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 660
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 534223358d54bf24e800bca55b8a87fb
+      internalID: 1633757994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_62
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 569
+        width: 125
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df4d601501d23884fbde42c185eccfbf
+      internalID: 1628447578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_63
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 683
+        width: 5
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48dbc5fef6a1aac49880f058ec4d7748
+      internalID: -1245426480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_64
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 680
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0abc37853ab012e43ae20bfb01996e2b
+      internalID: -1312532316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_65
+      rect:
+        serializedVersion: 2
+        x: 1349
+        y: 672
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f348efec485c04a92e79e0e1184f5c
+      internalID: 612716413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_66
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 667
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d415457447d6d284d8652331e3956461
+      internalID: 84432858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_67
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 625
+        width: 9
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1a209a5ec5bff5479b8e4b53855822b
+      internalID: 138845633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_68
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 628
+        width: 13
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a0d8f49653e0af4cae7b670418ad97b
+      internalID: 1690651690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_69
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 628
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd3306ab416846942b26bc556c3bf777
+      internalID: 1011383379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_70
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 504
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5abcace4935ad946b63a03de99c968f
+      internalID: 1315838982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_71
+      rect:
+        serializedVersion: 2
+        x: 1048
+        y: 503
+        width: 375
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d72f1e76b5cb304a97da06efd22551e
+      internalID: 524236398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_72
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 591
+        width: 35
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8627bb470ad1a8a4aa031ed5c64bfa31
+      internalID: 1887231126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_73
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 514
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38a5b0049a46e4a42a35ad517045c727
+      internalID: -877618301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_74
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 522
+        width: 81
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faea3aded3cac944a9b5e969f95b2713
+      internalID: 566145587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_75
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 524
+        width: 85
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b889785b3ec85a40b97e00eab3d420b
+      internalID: 2048280890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_76
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 525
+        width: 91
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fd45cb75fb63024aa4e1b080e518423
+      internalID: 541634981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_77
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 525
+        width: 90
+        height: 90
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21a848573118ade49a56e5de336b50ef
+      internalID: -1370530257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_78
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 531
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83377c60746f34d44bf59e730c174aca
+      internalID: -1491103813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_79
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 531
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 086e696c25cb0524e96a16681b885e0c
+      internalID: -1894017259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_80
+      rect:
+        serializedVersion: 2
+        x: 955
+        y: 531
+        width: 92
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10a2bd656dcf4e7479a56b27b43e0183
+      internalID: 1512187811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_81
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 559
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bbb3a525438f7342b288d0988f3b85b
+      internalID: 596382178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_82
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 456
+        width: 115
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbce6fdd6760e14ba309799a69c9145
+      internalID: 1214443023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 527
+        width: 31
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d413d11f979ddd34483749ea90526ada
+      internalID: 1921665357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 495
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d019834858d834e4d910bfc57e700631
+      internalID: 933632458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_85
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 495
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0d7fdbbbe249504b95a38e73491e044
+      internalID: -763519090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_86
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 500
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e7a1da4b977474d8f8b5f7928458e1
+      internalID: 1041825635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_87
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 349
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d259038ecede1584f94f83e17e6951c4
+      internalID: -135236863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_88
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 415
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752485b1053ae65419d7828f2cdcbbe0
+      internalID: -934750636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_89
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 427
+        width: 82
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5a720ba3746134b812da49900812fe
+      internalID: -550838373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_90
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 439
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f939e170b1e21b845b9bb58cf01ede9d
+      internalID: -868880074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_91
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 441
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 024d4d80e445e3c498b2edfe6c49e1cb
+      internalID: -1871924395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_92
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 441
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b405c62b296974999ce9ca317c2c99
+      internalID: 1862881966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_93
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 441
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165d52f6c1fce1146b0ac30bb0e4a609
+      internalID: 2066861188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_94
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 441
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850aca1ef5ac4cf46bd145e3252f5b6f
+      internalID: -1340465477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_95
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 443
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dfd30116b54ae847a52cedf40255728
+      internalID: 989780724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_96
+      rect:
+        serializedVersion: 2
+        x: 929
+        y: 445
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca498f28bdf3d5248a1578fb7d43efb0
+      internalID: 1976480416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_97
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 463
+        width: 12
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5173d1905356074d92b893b100f6096
+      internalID: 614845350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_98
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 465
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5013537d7ba00459391c4614a33b2e
+      internalID: 1290505955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_99
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 432
+        width: 30
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0e9ebb24f0dab4d948d5883da4f0b2
+      internalID: 1146385766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_100
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 344
+        width: 115
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66fdc1cad489fd4a8d30570fae656ea
+      internalID: 1586509371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_101
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 354
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d217a18d0c8cc23419ea773b6094e0d8
+      internalID: -1065533166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_102
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 362
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 067a539825729d34c8d33a8508dfce24
+      internalID: 53444942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_103
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 365
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d39c11fe7e7e1540a51e163b33a1264
+      internalID: 1750304198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_104
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 365
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33c934b70b35db44aad05d356dd71a3
+      internalID: -187690422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_105
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 367
+        width: 100
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b73f58c8ea8eb340a63b7d9e21629dc
+      internalID: -989465028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_106
+      rect:
+        serializedVersion: 2
+        x: 932
+        y: 367
+        width: 99
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b90f50a995a28f4ba7aab26e362c973
+      internalID: 378225240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_107
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 401
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17e6bef6152f503489f0f758f9878bf8
+      internalID: -1972682229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_108
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 316
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49968a1ddd230d1489bac5b56346398a
+      internalID: 1892949071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_109
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 332
+        width: 81
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d127575bf64c7d41bd19393537a9b9c
+      internalID: 848997363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_110
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 371
+        width: 33
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6599ca24097a634a94ee332a4c27cda
+      internalID: 1856406749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_111
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 343
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07eaa4631efb9de4aaf0df9d1bef59c9
+      internalID: -1801003526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_112
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 344
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1b6a8a1bc20084d97a58cb6797d742
+      internalID: 401340136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_113
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 194
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93a68b3929bce144f9263b90131b572b
+      internalID: -1360291147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_114
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 269
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2211ad48d0e8f848943a6862f34e1d0
+      internalID: 1851087470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_115
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 283
+        width: 78
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0cc25723aaad7940b23393f56d5e14e
+      internalID: 73097465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_116
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 291
+        width: 99
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee839790c5c6d2e488ad08b6239e2584
+      internalID: 269586160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_117
+      rect:
+        serializedVersion: 2
+        x: 870
+        y: 291
+        width: 80
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e41bface6cc65e40a1425679add67cd
+      internalID: -889367686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_118
+      rect:
+        serializedVersion: 2
+        x: 952
+        y: 292
+        width: 95
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4562328d92fd6d4c98e979c3859fb04
+      internalID: -898687872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_119
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 316
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f18c8bc528715640ae14e3d7e34213b
+      internalID: 1998374146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_120
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 316
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3e1351095a50f4fafd1b9a3475b8c1
+      internalID: 1432303388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_121
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 316
+        width: 9
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03f75c9182e5a7741a7b6d60e9372f09
+      internalID: 1832704795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_122
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 242
+        width: 110
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05727e6755a73f148a39b6c46944a109
+      internalID: -864279165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_123
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 245
+        width: 79
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c73e4e33fbacaf429fe3708166fe60d
+      internalID: 449802068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_124
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 290
+        width: 25
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb55e9ae186d9cc40af2e46435510deb
+      internalID: 754897958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_125
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 292
+        width: 9
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c23b89e015990b4b9833f22753c7fb8
+      internalID: -226565671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_126
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 218
+        width: 99
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8795bd0c705f1fe44b745f56d5867abb
+      internalID: 269212582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_127
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 264
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3312557608cb11478c43a3bdb54a0a7
+      internalID: 1983059836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_128
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 269
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 491508400fb73d542922ba2c819681b0
+      internalID: -1074003482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_129
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 207
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a424252177e87b449f44d703928302f
+      internalID: -1786423795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_130
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 218
+        width: 62
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2131618d451613c48a739989c45252b2
+      internalID: 1008104186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_131
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 226
+        width: 135
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df5b5275185fa2e48bfbda3cd7e2ee85
+      internalID: -700065219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_132
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 227
+        width: 135
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 112ece6fea70cc64a9ec93cf6cee8dae
+      internalID: 1605683887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_133
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 239
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3e38161ff174d448968464483e0771f
+      internalID: 451993669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_134
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 244
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29146a63f64ddb946ae7f1b4bef66b9b
+      internalID: -690317232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_135
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 184
+        width: 93
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee95fd63c93558f42b491a931da6eb51
+      internalID: -2085896927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_136
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 219
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dba545492b5037049bcb9f7dd50328ca
+      internalID: 1257470915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_137
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 220
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e67ed8ae15c2f946b8cac0d07afa7e0
+      internalID: 573215288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_138
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 140
+        width: 110
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7c305c259d6334586c535fccc91aa5
+      internalID: -306203428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_139
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 162
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc8a163d49caa324795acd8a6e0259fd
+      internalID: 1643097872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_140
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 170
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7b672f4438f17046b269380e73a90c9
+      internalID: -309642981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_141
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 171
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd9392572a45d5a438673a2b2f48d540
+      internalID: -861845437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_142
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 172
+        width: 81
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53fdb9c93170bf34b8fe125db39bbf92
+      internalID: -576757306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_143
+      rect:
+        serializedVersion: 2
+        x: 936
+        y: 178
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61977d38551898f4dbe011bbc148c1e4
+      internalID: -746743978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_144
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 179
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5639c53c6c09bd24ea7d6743d716198d
+      internalID: 688626924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_145
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 202
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64a5846c09d481643a9d2c71592a9288
+      internalID: 760219636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_146
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 203
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7db1942b3f7e4f4183076a5541064f4
+      internalID: 983587920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_147
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 121
+        width: 98
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0eb1482ff52d91c4188859582f634152
+      internalID: 1830079608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_148
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 131
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de04b96fcaeef914891a04d53de4974e
+      internalID: -2049428490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_149
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 151
+        width: 50
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc8b26ec630866c42844b80035fd1b52
+      internalID: -1961437784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_150
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 186
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98e8475a19558524487c40a9e229815a
+      internalID: -1804337666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_151
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 187
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37eb798b61190984291d90143137a60e
+      internalID: -1753233344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_152
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 39
+        width: 126
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd48431c6f887c94bbbb2724cc86f03b
+      internalID: -1374957292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_153
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 171
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b82bbac588998498cf92818314abab
+      internalID: 1626879290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_154
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 172
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35508e1196e434d4995fbd6280f8af7b
+      internalID: -1953144613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_155
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 99
+        width: 92
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe60a4a1b15ec14a991199a4ca3082b
+      internalID: -97686290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_156
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 158
+        width: 19
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf98aa24a4e3d54db0a63933df90c22
+      internalID: -85596508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_157
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 158
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8967ebb314d58340b2f38da797e6e98
+      internalID: -1125012598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_158
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 79
+        width: 61
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac21c8fd6c8f62e4481c0580843992ec
+      internalID: -746881224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_159
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 114
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ef2679ea6c074986eb0a7556b7ec4
+      internalID: 238726172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_160
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 123
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5587cef3eeec0024182e5512d1214e34
+      internalID: 680120215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_161
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 125
+        width: 48
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642e3ede664c891469cd139604cab6c6
+      internalID: 38094470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_162
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 125
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfe789ca4f6b274e93285d6cb4e0f06
+      internalID: -1185011908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_163
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 125
+        width: 46
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3d2161277f661448eb4bce04a9f897
+      internalID: -2078816711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_164
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 126
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03cd36847c97f448bf4eb209707c676
+      internalID: 253462702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_165
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 145
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33698bf4a3a9efe4bb9783b3fdacacf8
+      internalID: -738324715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_166
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 146
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f6d77ee849e084a967922ac9fdc9e2
+      internalID: 1459237192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_167
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 147
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7e84ac91b1cfad45a5ec1e22ae2790e
+      internalID: -1566387756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_168
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 91
+        width: 45
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b160037b28ffb4544990fa49c5921240
+      internalID: -1109696491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_169
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 134
+        width: 37
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be299c03713b6804b83700352ffa7deb
+      internalID: 877806597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_170
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 37
+        width: 109
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a6c7de8824bd034dbde924924f7fd0d
+      internalID: 820229674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_171
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 123
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1b210e12cfdaa4eb489a4b1a5a4fe0
+      internalID: 1858238258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_172
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 55
+        width: 78
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a80a76d88b0c7e24b92f4a3ca975fa1e
+      internalID: 1727984335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_173
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 112
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dee197ecb6600d243bd24baa37f6c4f8
+      internalID: 53739718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_174
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 114
+        width: 23
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1027be29204636d449ee41d12f0362fc
+      internalID: 1771072537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_175
+      rect:
+        serializedVersion: 2
+        x: 298
+        y: 26
+        width: 99
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1c2ea14e4bc0744ab57c5d87679070
+      internalID: 1156557674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_176
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 75
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82b6909099dad4a4b949976f329eb93b
+      internalID: 1379744173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_177
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 78
+        width: 51
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89544e127b7a90045b8de48e784829f9
+      internalID: -1675188231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_178
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 79
+        width: 46
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf126c1075e1fb0489996b9d1e8ca04d
+      internalID: 126065786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_179
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 81
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a24be0207bcd4e4c82a38489dd71338
+      internalID: -1400620988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_180
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 3
+        width: 79
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87eb6af1e5e6af146a5e71dfb433430c
+      internalID: -1312888253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_181
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 14
+        width: 92
+        height: 83
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b51847cba35fc347b4d7fbcfa888f92
+      internalID: -1299885237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_182
+      rect:
+        serializedVersion: 2
+        x: 668
+        y: 35
+        width: 58
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc68fc4694133784cafeeca8164ccec8
+      internalID: 1720371960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_183
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 66
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a02fc2e397c4e45b963bfcfb8c70b8
+      internalID: -1300235695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_184
+      rect:
+        serializedVersion: 2
+        x: 792
+        y: 27
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53243ccd7d29b540ab09113fa037acc
+      internalID: -1232639748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_185
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 31
+        width: 47
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbc04b43f984784eb92eaabfb226c32
+      internalID: -688929923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_186
+      rect:
+        serializedVersion: 2
+        x: 903
+        y: 35
+        width: 51
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 165387236f88f6f4792bec9072118203
+      internalID: -832663025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_187
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 42
+        width: 80
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a68ab78c8199e4ebadc325473fdf83
+      internalID: -1406420788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_188
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 1
+        width: 68
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b218ceb1cf9d994ba72c754d4fb6a37
+      internalID: 1661051993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pajaros_sprite_sheet_189
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 18
+        width: 48
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25d391ec071abe144b7b721f10615511
+      internalID: -1969175569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pajaros_sprite_sheet_185: -688929923
+      pajaros_sprite_sheet_27: -1196747314
+      pajaros_sprite_sheet_160: 680120215
+      pajaros_sprite_sheet_44: -944518583
+      pajaros_sprite_sheet_47: -1101674298
+      pajaros_sprite_sheet_69: 1011383379
+      pajaros_sprite_sheet_95: 989780724
+      pajaros_sprite_sheet_54: -1543364276
+      pajaros_sprite_sheet_82: 1214443023
+      pajaros_sprite_sheet_99: 1146385766
+      pajaros_sprite_sheet_38: -521011323
+      pajaros_sprite_sheet_33: -1844164887
+      pajaros_sprite_sheet_100: 1586509371
+      pajaros_sprite_sheet_151: -1753233344
+      pajaros_sprite_sheet_161: 38094470
+      pajaros_sprite_sheet_3: 1318475990
+      pajaros_sprite_sheet_114: 1851087470
+      pajaros_sprite_sheet_39: -1232747838
+      pajaros_sprite_sheet_31: -272725903
+      pajaros_sprite_sheet_137: 573215288
+      pajaros_sprite_sheet_109: 848997363
+      pajaros_sprite_sheet_26: -409344203
+      pajaros_sprite_sheet_66: 84432858
+      pajaros_sprite_sheet_182: 1720371960
+      pajaros_sprite_sheet_120: 1432303388
+      pajaros_sprite_sheet_19: -2089498112
+      pajaros_sprite_sheet_180: -1312888253
+      pajaros_sprite_sheet_119: 1998374146
+      pajaros_sprite_sheet_103: 1750304198
+      pajaros_sprite_sheet_40: -1650816660
+      pajaros_sprite_sheet_12: -1544778379
+      pajaros_sprite_sheet_29: -1342355306
+      pajaros_sprite_sheet_30: -845720799
+      pajaros_sprite_sheet_93: 2066861188
+      pajaros_sprite_sheet_101: -1065533166
+      pajaros_sprite_sheet_21: -994515355
+      pajaros_sprite_sheet_52: -1895014677
+      pajaros_sprite_sheet_179: -1400620988
+      pajaros_sprite_sheet_55: -1916231570
+      pajaros_sprite_sheet_140: -309642981
+      pajaros_sprite_sheet_90: -868880074
+      pajaros_sprite_sheet_126: 269212582
+      pajaros_sprite_sheet_88: -934750636
+      pajaros_sprite_sheet_83: 1921665357
+      pajaros_sprite_sheet_42: -33134535
+      pajaros_sprite_sheet_106: 378225240
+      pajaros_sprite_sheet_133: 451993669
+      pajaros_sprite_sheet_34: -1100098846
+      pajaros_sprite_sheet_41: 2084447265
+      pajaros_sprite_sheet_84: 933632458
+      pajaros_sprite_sheet_0: 37850423
+      pajaros_sprite_sheet_163: -2078816711
+      pajaros_sprite_sheet_98: 1290505955
+      pajaros_sprite_sheet_128: -1074003482
+      pajaros_sprite_sheet_188: 1661051993
+      pajaros_sprite_sheet_37: 1682197343
+      pajaros_sprite_sheet_13: -1894100812
+      pajaros_sprite_sheet_166: 1459237192
+      pajaros_sprite_sheet_181: -1299885237
+      pajaros_sprite_sheet_57: -637635343
+      pajaros_sprite_sheet_15: -119025672
+      pajaros_sprite_sheet_62: 1628447578
+      pajaros_sprite_sheet_14: -2143054475
+      pajaros_sprite_sheet_22: -2049815427
+      pajaros_sprite_sheet_125: -226565671
+      pajaros_sprite_sheet_59: -2070094717
+      pajaros_sprite_sheet_167: -1566387756
+      pajaros_sprite_sheet_5: -834538314
+      pajaros_sprite_sheet_16: -745316814
+      pajaros_sprite_sheet_158: -746881224
+      pajaros_sprite_sheet_81: 596382178
+      pajaros_sprite_sheet_85: -763519090
+      pajaros_sprite_sheet_139: 1643097872
+      pajaros_sprite_sheet_121: 1832704795
+      pajaros_sprite_sheet_9: 1293378465
+      pajaros_sprite_sheet_32: -2059519127
+      pajaros_sprite_sheet_86: 1041825635
+      pajaros_sprite_sheet_134: -690317232
+      pajaros_sprite_sheet_187: -1406420788
+      pajaros_sprite_sheet_94: -1340465477
+      pajaros_sprite_sheet_89: -550838373
+      pajaros_sprite_sheet_51: -1448219877
+      pajaros_sprite_sheet_65: 612716413
+      pajaros_sprite_sheet_130: 1008104186
+      pajaros_sprite_sheet_171: 1858238258
+      pajaros_sprite_sheet_150: -1804337666
+      pajaros_sprite_sheet_7: -853147846
+      pajaros_sprite_sheet_189: -1969175569
+      pajaros_sprite_sheet_122: -864279165
+      pajaros_sprite_sheet_144: 688626924
+      pajaros_sprite_sheet_118: -898687872
+      pajaros_sprite_sheet_142: -576757306
+      pajaros_sprite_sheet_78: -1491103813
+      pajaros_sprite_sheet_131: -700065219
+      pajaros_sprite_sheet_68: 1690651690
+      pajaros_sprite_sheet_138: -306203428
+      pajaros_sprite_sheet_117: -889367686
+      pajaros_sprite_sheet_152: -1374957292
+      pajaros_sprite_sheet_77: -1370530257
+      pajaros_sprite_sheet_156: -85596508
+      pajaros_sprite_sheet_11: 2128529407
+      pajaros_sprite_sheet_104: -187690422
+      pajaros_sprite_sheet_111: -1801003526
+      pajaros_sprite_sheet_73: -877618301
+      pajaros_sprite_sheet_79: -1894017259
+      pajaros_sprite_sheet_50: 1574137715
+      pajaros_sprite_sheet_153: 1626879290
+      pajaros_sprite_sheet_157: -1125012598
+      pajaros_sprite_sheet_67: 138845633
+      pajaros_sprite_sheet_129: -1786423795
+      pajaros_sprite_sheet_20: -715218365
+      pajaros_sprite_sheet_17: 1388309011
+      pajaros_sprite_sheet_145: 760219636
+      pajaros_sprite_sheet_113: -1360291147
+      pajaros_sprite_sheet_173: 53739718
+      pajaros_sprite_sheet_28: -883713423
+      pajaros_sprite_sheet_46: -1059447273
+      pajaros_sprite_sheet_164: 253462702
+      pajaros_sprite_sheet_146: 983587920
+      pajaros_sprite_sheet_143: -746743978
+      pajaros_sprite_sheet_53: -1727121754
+      pajaros_sprite_sheet_2: -1464191434
+      pajaros_sprite_sheet_87: -135236863
+      pajaros_sprite_sheet_43: 2011010559
+      pajaros_sprite_sheet_186: -832663025
+      pajaros_sprite_sheet_63: -1245426480
+      pajaros_sprite_sheet_45: 472641648
+      pajaros_sprite_sheet_127: 1983059836
+      pajaros_sprite_sheet_176: 1379744173
+      pajaros_sprite_sheet_105: -989465028
+      pajaros_sprite_sheet_175: 1156557674
+      pajaros_sprite_sheet_70: 1315838982
+      pajaros_sprite_sheet_64: -1312532316
+      pajaros_sprite_sheet_116: 269586160
+      pajaros_sprite_sheet_148: -2049428490
+      pajaros_sprite_sheet_132: 1605683887
+      pajaros_sprite_sheet_80: 1512187811
+      pajaros_sprite_sheet_36: 452276885
+      pajaros_sprite_sheet_123: 449802068
+      pajaros_sprite_sheet_24: 1326113634
+      pajaros_sprite_sheet_18: 1715718028
+      pajaros_sprite_sheet_1: -243331344
+      pajaros_sprite_sheet_74: 566145587
+      pajaros_sprite_sheet_35: -1015333371
+      pajaros_sprite_sheet_92: 1862881966
+      pajaros_sprite_sheet_177: -1675188231
+      pajaros_sprite_sheet_49: 156510364
+      pajaros_sprite_sheet_96: 1976480416
+      pajaros_sprite_sheet_136: 1257470915
+      pajaros_sprite_sheet_108: 1892949071
+      pajaros_sprite_sheet_174: 1771072537
+      pajaros_sprite_sheet_162: -1185011908
+      pajaros_sprite_sheet_110: 1856406749
+      pajaros_sprite_sheet_154: -1953144613
+      pajaros_sprite_sheet_25: -1514703833
+      pajaros_sprite_sheet_91: -1871924395
+      pajaros_sprite_sheet_75: 2048280890
+      pajaros_sprite_sheet_159: 238726172
+      pajaros_sprite_sheet_61: 1633757994
+      pajaros_sprite_sheet_4: -446568774
+      pajaros_sprite_sheet_149: -1961437784
+      pajaros_sprite_sheet_6: 1701504526
+      pajaros_sprite_sheet_155: -97686290
+      pajaros_sprite_sheet_124: 754897958
+      pajaros_sprite_sheet_58: -1001893298
+      pajaros_sprite_sheet_107: -1972682229
+      pajaros_sprite_sheet_56: -2116605249
+      pajaros_sprite_sheet_112: 401340136
+      pajaros_sprite_sheet_169: 877806597
+      pajaros_sprite_sheet_102: 53444942
+      pajaros_sprite_sheet_71: 524236398
+      pajaros_sprite_sheet_115: 73097465
+      pajaros_sprite_sheet_178: 126065786
+      pajaros_sprite_sheet_60: -2097293352
+      pajaros_sprite_sheet_97: 614845350
+      pajaros_sprite_sheet_23: -845736103
+      pajaros_sprite_sheet_76: 541634981
+      pajaros_sprite_sheet_172: 1727984335
+      pajaros_sprite_sheet_141: -861845437
+      pajaros_sprite_sheet_184: -1232639748
+      pajaros_sprite_sheet_8: -1799783469
+      pajaros_sprite_sheet_72: 1887231126
+      pajaros_sprite_sheet_165: -738324715
+      pajaros_sprite_sheet_183: -1300235695
+      pajaros_sprite_sheet_48: -329265132
+      pajaros_sprite_sheet_170: 820229674
+      pajaros_sprite_sheet_135: -2085896927
+      pajaros_sprite_sheet_168: -1109696491
+      pajaros_sprite_sheet_10: -1817267113
+      pajaros_sprite_sheet_147: 1830079608
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
