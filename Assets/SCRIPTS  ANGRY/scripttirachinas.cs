@@ -1,62 +1,99 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class scripttirachinas : MonoBehaviour
 {
 
-    public LineRenderer[] lineRenderers;
-    public Transform[] stripPosition;
-    public Transform center;
-    public Transform idlePosition;
-
-    bool isMouseDown;
+    public GameObject pajaro;
+    public Rigidbody2D pivote;
+    public float tiempoQuitarSprintJoin;
+    public float tiempoFinJuego;
 
 
-    private void Start()
+    private Vector3 posicionInicial;
+
+
+    private Camera camara;
+    private Rigidbody2D bolaRigidbody;
+    private SpringJoint2D bolaSprintJoint;
+
+    private bool estaArrastrando;
+
+
+
+
+    void Start()
     {
-        lineRenderers[0].positionCount=2;
-        lineRenderers[1].positionCount=2;
-        lineRenderers[0].SetPosition(0, stripPosition[0].position);
-        lineRenderers[0].SetPosition(0, stripPosition[1].position);
+        camara = Camera.main;
 
+        bolaRigidbody = pajaro.GetComponent<Rigidbody2D>();
+
+        bolaSprintJoint = pajaro.GetComponent<SpringJoint2D>();
+
+        bolaSprintJoint.connectedBody = pivote;
     }
+
+
+
+
+
     void Update()
     {
-        if (isMouseDown)
+
+        if (bolaRigidbody == null) { return; }
+
+        if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
+            if (estaArrastrando)
 
-            Vector3 mousePosition = Input.mousePosition;
-            mousePosition.z =10;
+            {
+                LanzarBola();
 
-            SetStrips(mousePosition);
+            }
+
+            estaArrastrando = false;
+
+            return;
         }
-        else
-        {
-            ResetStrip();
 
-        }
-    }
-    private void OnMouseDown()
-    {
-        isMouseDown =true;
-    }
-    private void OnMouseUp()
-    {
-        isMouseDown =false;
+        estaArrastrando = true;
+
+        bolaRigidbody.isKinematic = true;
+
+        Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
+        Vector3 posicionMundo = camara.ScreenToWorldPoint(posicionTocar);
+        bolaRigidbody.position = posicionMundo;
+        Debug.Log(posicionTocar + " " + posicionMundo);
     }
 
 
-    void ResetStrip()
+    private void LanzarBola()
     {
-        SetStrips(idlePosition.position);
+
+        bolaRigidbody.isKinematic = false;
+        bolaRigidbody = null;
+
+        Invoke(nameof(QuitarSprintJoin), tiempoQuitarSprintJoin);
+    }
+    private void QuitarSprintJoin()
+    {
+
+        bolaSprintJoint.enabled = false;
+        bolaSprintJoint = null;
+
+        Invoke(nameof(FinJuego), tiempoFinJuego);
+
     }
 
-     void SetStrips(Vector3 position)
+    private void FinJuego()
     {
-        lineRenderers[0].SetPosition(1, position);
-        lineRenderers[1].SetPosition(1, position);
+
+        SceneManager.LoadScene("FinNivel");
+
+        Debug.Log("Fin Juego");
     }
-    
 
 }
