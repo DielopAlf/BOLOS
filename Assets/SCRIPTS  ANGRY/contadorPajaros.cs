@@ -3,44 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class contadorPajaros : MonoBehaviour
-
+public class ContadorPajaros : MonoBehaviour
 {
     public TextMeshProUGUI PuntosTxt;
-    private int cuantos = 0;
     private controldatos datosJuego;
 
-    void Start()
+    public int puntosPorColision = 20; // Valor de puntos a incrementar por cada colisión
+
+    private int puntuacion;
+
+    public int Puntuacion
+    {
+        get { return puntuacion; }
+        set
+        {
+            puntuacion = value;
+            PUNTOSTxt(puntuacion);
+        }
+    }
+
+    private void Start()
     {
         datosJuego = GameObject.Find("datosJuego").GetComponent<controldatos>();
+        Puntuacion = datosJuego.Puntuacion;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("cerdo"))
         {
-            Debug.Log("contar");
-            cuantos++;
-            datosJuego.Puntuacion = cuantos;
-            //PUNTOSTxt();
-        }
-    }
-    public void PUNTOSTxt(int cuantos)
-    {
-
-        PuntosTxt.text = "Puntuacion:" + cuantos.ToString();
-
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("cerdo"))
-        {
-            cuantos--;
-            datosJuego.Puntuacion = cuantos;
-
+            Debug.Log("Contar");
+            Puntuacion += puntosPorColision; // Incrementa la puntuación utilizando la propiedad Puntuacion
+            datosJuego.Puntuacion = Puntuacion; // Actualiza la puntuación en el script 'controldatos'
         }
     }
 
-
-
+    public void PUNTOSTxt(int puntuacion)
+    {
+        PuntosTxt.text = "Puntuacion: " + puntuacion.ToString();
+    }
 }

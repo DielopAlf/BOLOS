@@ -838,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327576287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.168, y: -1.1339998, z: 0}
+  m_LocalPosition: {x: 4.57, y: -1.1339998, z: 0}
   m_LocalScale: {x: 0.40889502, y: 0.40889502, z: 0.40889502}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1126,7 +1126,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497151544}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.25, y: -1.731, z: 0}
+  m_LocalPosition: {x: 3.61, y: -1.17, z: 0}
   m_LocalScale: {x: 0.40889502, y: 0.40889502, z: 0.40889502}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2243,6 +2243,8 @@ MonoBehaviour:
   pivote: {fileID: 1227913898}
   tiempoQuitarSprintJoin: 0.15
   tiempoFinJuego: 10
+  tamanoInicial: 0
+  tamanoFinal: 0
 --- !u!114 &1104866588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,6 +2258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuntosTxt: {fileID: 570015911}
+  puntosPorColision: 20
 --- !u!1 &1148853763
 GameObject:
   m_ObjectHideFlags: 0
