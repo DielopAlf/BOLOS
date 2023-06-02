@@ -35,7 +35,12 @@ public class ContadorPajaros : MonoBehaviour
             Debug.Log("Contar");
             Puntuacion += puntosPorColision; // Incrementa la puntuación utilizando la propiedad Puntuacion
             datosJuego.Puntuacion = Puntuacion; // Actualiza la puntuación en el script 'controldatos'
+
+            
+
         }
+        
+
     }
 
     public void PUNTOSTxt(int puntuacion)

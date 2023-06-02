@@ -28,6 +28,7 @@ public class enemigocontrol : MonoBehaviour
              
         }
     }
+
     else if (other.gameObject.CompareTag("Player"))
     {
         other.gameObject.GetComponent<ControlLanzamientos>();

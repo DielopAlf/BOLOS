@@ -7,6 +7,7 @@ TagManager:
   - Bolo
   - Pajaro
   - cerdo
+  - pared
   layers:
   - Default
   - TransparentFX

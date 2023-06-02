@@ -22,6 +22,13 @@ public class scripttirachinas : MonoBehaviour
 
     private bool estaArrastrando;
 
+    public float velocidadNormal;
+    public float velocidadMinimaParaRomper = 1f;
+
+
+
+
+
     void Start()
     {
         camara = Camera.main;
@@ -40,7 +47,7 @@ public class scripttirachinas : MonoBehaviour
     {
         if (bolaRigidbody == null) { return; }
 
-        if (!Mouse.current.leftButton.isPressed)
+        if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
             if (estaArrastrando)
             {
@@ -56,7 +63,7 @@ public class scripttirachinas : MonoBehaviour
 
         bolaRigidbody.isKinematic = true;
 
-        Vector2 posicionTocar = Mouse.current.position.ReadValue();
+        Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
         Vector3 posicionMundo = camara.ScreenToWorldPoint(posicionTocar);
         bolaRigidbody.position = posicionMundo;
         Debug.Log(posicionTocar + " " + posicionMundo);
@@ -64,12 +71,24 @@ public class scripttirachinas : MonoBehaviour
 
     private void LanzarBola()
     {
-        bolaRigidbody = null;
         bolaRigidbody.isKinematic = false;
+        bolaRigidbody = null;
+        
 
         Invoke(nameof(QuitarSprintJoin), tiempoQuitarSprintJoin);
-    }
 
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("pared"))
+        {
+            if (velocidadNormal >= velocidadMinimaParaRomper)
+            {
+                Destroy(gameObject);
+            }
+
+        }
+    }
     private void QuitarSprintJoin()
     {
         bolaSprintJoint.enabled = false;
