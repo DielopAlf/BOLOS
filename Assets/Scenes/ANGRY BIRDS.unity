@@ -2933,10 +2933,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c81d2a18ba3c024fbd8fe1d16434ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pajaro: {fileID: 1104866581}
+  pajaroPrefab: {fileID: 1104866581}
   pivote: {fileID: 1227913898}
   tiempoQuitarSprintJoin: 0.15
   tiempoFinJuego: 10
+  tiempoEspera: 10
+  tiempoAparicionPajaro: 10
   tamanoInicial: 1
   tamanoFinal: 5
   velocidadNormal: 1
@@ -2950,7 +2952,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1104866581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0399597b217f42a4395beccd3000423c, type: 3}
+  m_Script: {fileID: 11500000, guid: 04c8e7641cc681548842898cd86cba38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PuntosTxt: {fileID: 570015911}

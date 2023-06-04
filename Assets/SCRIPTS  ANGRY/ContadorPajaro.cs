@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class ContadorPajaros : MonoBehaviour
+public class ContadorPajaro : MonoBehaviour
 {
     public TextMeshProUGUI PuntosTxt;
     private controldatos datosJuego;
@@ -36,10 +36,10 @@ public class ContadorPajaros : MonoBehaviour
             Puntuacion += puntosPorColision; // Incrementa la puntuación utilizando la propiedad Puntuacion
             datosJuego.Puntuacion = Puntuacion; // Actualiza la puntuación en el script 'controldatos'
 
-            
+
 
         }
-        
+
 
     }
 
