@@ -122,22 +122,22 @@ public class pajarolanzamiento : MonoBehaviour
         pajaros.Add(bola); // Agregar el nuevo pájaro a la lista
     }
 
-   private void FinJuego(bool victoria)
-{
-    juegoDetenido = true; // Detener el juego
-
-    if (victoria)
+    private void FinJuego(bool victoria)
     {
-        controladorInterfaz.MostrarPantallaVictoria(); // Mostrar la interfaz de victoria
-        FindObjectOfType<nextlevel>().DesbloquearNivel(); // Desbloquear el siguiente nivel
-    }
-    else
-    {
-        controladorInterfaz.MostrarPantallaDerrota(); // Mostrar la interfaz de derrota
-    }
+        juegoDetenido = true; // Detener el juego
 
-    Time.timeScale = 0; // Detener la escala de tiempo del juego
-}
+        if (victoria)
+        {
+            controladorInterfaz.MostrarPantallaVictoria(); // Mostrar la interfaz de victoria
+           // FindObjectOfType<nextlevel>().DesbloquearSiguienteNivel(); // Desbloquear el siguiente nivel
+        }
+        else
+        {
+            controladorInterfaz.MostrarPantallaDerrota(); // Mostrar la interfaz de derrota
+        }
+
+        Time.timeScale = 0; // Detener la escala de tiempo del juego
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

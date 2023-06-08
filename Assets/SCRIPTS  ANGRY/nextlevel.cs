@@ -5,15 +5,17 @@ using UnityEngine.SceneManagement;
 
 public class nextlevel : MonoBehaviour
 {
-    public string nivelSiguiente; // Nombre del siguiente nivel
+    
+
+    void Start()
+    {
+        Debug.Log("cargarnivel2");
+    }
 
     public void LoadA(string nivel)
     {
         SceneManager.LoadScene(nivel);
     }
 
-    public void DesbloquearNivel()
-    {
-        
-    }
+   
 }

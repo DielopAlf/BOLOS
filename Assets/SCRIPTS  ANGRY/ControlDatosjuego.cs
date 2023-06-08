@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ControlDatosjuego : MonoBehaviour
 {
     private int maxpuntuacion;
@@ -14,10 +14,7 @@ public class ControlDatosjuego : MonoBehaviour
     public int MaxPuntuacion { get => maxpuntuacion; set => maxpuntuacion = value; }
     public int VidasExtras { get => vidasExtras; set => vidasExtras = value; }
 
-    public void DesbloquearSiguienteNivel()
-    {
-        // Lógica para desbloquear el siguiente nivel
-    }
+  
 
     private void Awake()
     {
@@ -43,6 +40,3 @@ public class ControlDatosjuego : MonoBehaviour
         }
     }
 }
-
-
-

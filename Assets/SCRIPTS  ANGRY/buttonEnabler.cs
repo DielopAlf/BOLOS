@@ -6,10 +6,10 @@ using UnityEngine.UI;
 public class buttonEnabler : MonoBehaviour
 {
     [SerializeField] int nivel = 0;
+
     void Awake()
     {
         int superado = PlayerPrefs.GetInt("NivelSuperado" + (nivel - 1).ToString(), 0);
         GetComponent<Button>().interactable = superado == 1 ? true : false;
     }
-
 }

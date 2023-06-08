@@ -29,7 +29,7 @@ public class enemigocontrol : MonoBehaviour
                 Destroy(gameObject);
 
                 datosJuego.Ganado = true;
-                datosJuego.DesbloquearSiguienteNivel();
+              
 
                 if (interfazController != null)
                 {
