@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
 using MyNamespace;
-//using static LeanTween;
 
 public class pajarolanzamiento : MonoBehaviour
 {
@@ -28,11 +27,10 @@ public class pajarolanzamiento : MonoBehaviour
     private Vector2 initialPosition; // Posición inicial del pájaro
 
     private controldatos datosJuego;
+    private interfazController controladorInterfaz;
+    private bool haGanado = false; // Variable para verificar si el jugador ha ganado el juego
 
-
-    public nextlevel nivelSiguiente;
-
-    private static interfazController controladorinterfaz;
+    private int cerdosRestantes; // Número de cerdos restantes en la escena
 
     private void Start()
     {
@@ -40,23 +38,22 @@ public class pajarolanzamiento : MonoBehaviour
         bolaRigidbody = GetComponent<Rigidbody2D>();
         bolaSprintJoint = GetComponent<SpringJoint2D>();
         datosJuego = GameObject.Find("datosJuego").GetComponent<controldatos>();
+        controladorInterfaz = GameObject.Find("controladorVictoria").GetComponent<interfazController>();
         bolaSprintJoint.connectedBody = pivote;
-
-        controladorinterfaz = GameObject.Find("controladorVictoria").GetComponent<interfazController>();
-
-
 
         initialPosition = transform.position; // Almacenar la posición inicial del pájaro
 
         pajaros = new List<GameObject>();
         pajaros.Add(gameObject); // Agregar el pájaro inicial a la lista
+
+        // Obtener el número inicial de cerdos en la escena
+        cerdosRestantes = GameObject.FindGameObjectsWithTag("cerdo").Length;
     }
 
     private void Update()
     {
-        if (bolaRigidbody == null || juegoDetenido) { 
-            Debug.Log("null");
-            return; }
+        if (bolaRigidbody == null || juegoDetenido)
+            return;
 
         if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
@@ -94,18 +91,24 @@ public class pajarolanzamiento : MonoBehaviour
 
         vidasExtras--; // Reducir el número de vidas extra
 
-       
-
-
-        if (vidasExtras <= 0)
+        if (vidasExtras <= 0 && !haGanado)
         {
-            Invoke(nameof(FinJuego), tiempoFinJuego);
+            if (datosJuego.Puntuacion >= datosJuego.puntosPorColision * cerdosRestantes)
+            {
+                haGanado = true;
+                FinJuego(true); // Llamar a la función FinJuego con victoria si ha tocado todos los cerdos y no le quedan vidas extras
+            }
+            else
+            {
+                FinJuego(false); // Llamar a la función FinJuego con derrota si no ha ganado y no ha tocado todos los cerdos
+            }
         }
         else
         {
             Invoke(nameof(RespawnBola), respawnDelay);
         }
-        controladorinterfaz.perdervida();
+
+        controladorInterfaz.PerderVida(); // Actualizar la interfaz para mostrar la pérdida de una vida
     }
 
     private void RespawnBola()
@@ -117,55 +120,51 @@ public class pajarolanzamiento : MonoBehaviour
         nuevaBolaSprintJoint.connectedBody = pivote;
 
         pajaros.Add(bola); // Agregar el nuevo pájaro a la lista
-
-
-
     }
-    
-    private void FinJuego()
-    {
-        // cqargar canvas victoreia 
-        // esta desactivadoi, hay que actiuvarlo
 
-        Debug.Log("Fin Juego");
-    }
-    void GuardarDatos(bool hasWon)
+   private void FinJuego(bool victoria)
 {
-   
+    juegoDetenido = true; // Detener el juego
 
+    if (victoria)
+    {
+        controladorInterfaz.MostrarPantallaVictoria(); // Mostrar la interfaz de victoria
+        FindObjectOfType<nextlevel>().DesbloquearNivel(); // Desbloquear el siguiente nivel
+    }
+    else
+    {
+        controladorInterfaz.MostrarPantallaDerrota(); // Mostrar la interfaz de derrota
+    }
 
-    
-
-
-    // Desactivar el control del jugador
-    //GetComponent<BallBehaviour>().enabled = false;
+    Time.timeScale = 0; // Detener la escala de tiempo del juego
 }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("cerdo"))
         {
-            Debug.Log("Contar");
-            datosJuego.Puntuacion += datosJuego.puntosPorColision; // Incrementa la puntuación utilizando la propiedad Puntuacion
+            datosJuego.Puntuacion += datosJuego.puntosPorColision; // Incrementar la puntuación utilizando la propiedad Puntuacion
+            cerdosRestantes--; // Reducir el número de cerdos restantes
+
+            if (!haGanado && cerdosRestantes <= 0)
+            {
+                haGanado = true;
+                FinJuego(true); // Llamar a la función FinJuego con victoria si ha tocado todos los cerdos
+            }
         }
-
-
     }
 
     public void ReiniciarNivel()
-{
-        // Cargar de nuevo la escena actual
-    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    Time.timeScale = 1; // Restablecer la escala de tiempo del juego
-    juegoDetenido = false;
-    GetComponent<pajarolanzamiento>().enabled = true;
-}
-public void VolverAlMenuPrincipal()
-{
-    // Cargar la escena del menú principal
-    SceneManager.LoadScene("MenuInicial");
-    Time.timeScale = 1; // Restablecer la escala de tiempo del juego
-}
-}
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Cargar de nuevo la escena actual
+        Time.timeScale = 1; // Restablecer la escala de tiempo del juego
+        juegoDetenido = false;
+        GetComponent<pajarolanzamiento>().enabled = true;
+    }
 
-
+    public void VolverAlMenuPrincipal()
+    {
+        SceneManager.LoadScene("Titulo"); // Cargar la escena del menú principal
+        Time.timeScale = 1; // Restablecer la escala de tiempo del juego
+    }
+}

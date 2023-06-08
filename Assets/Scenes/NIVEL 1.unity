@@ -3524,7 +3524,6 @@ MonoBehaviour:
   tiempoFinJuego: 10
   vidasExtras: 4
   respawnDelay: 2
-  nivelSiguiente: {fileID: 0}
 --- !u!1 &1148853763
 GameObject:
   m_ObjectHideFlags: 0
@@ -3958,7 +3957,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1312100350}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104866587}
+        m_TargetAssemblyTypeName: pajarolanzamiento, Assembly-CSharp
+        m_MethodName: VolverAlMenuPrincipal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1312100350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4471,6 +4482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PuntosTxt: {fileID: 570015911}
   puntosPorColision: 20
+  numeroDeCerdos: 0
 --- !u!1 &1375145063
 GameObject:
   m_ObjectHideFlags: 0
@@ -4689,7 +4701,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1384375333}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104866587}
+        m_TargetAssemblyTypeName: pajarolanzamiento, Assembly-CSharp
+        m_MethodName: VolverAlMenuPrincipal
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1384375333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5173,7 +5197,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482166893}
-  - component: {fileID: 1482166892}
   m_Layer: 0
   m_Name: ContadorPajaro
   m_TagString: Untagged
@@ -5181,18 +5204,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1482166892
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1482166891}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04c8e7641cc681548842898cd86cba38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1482166893
 Transform:
   m_ObjectHideFlags: 0
@@ -5426,7 +5437,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1594135148}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104866587}
+        m_TargetAssemblyTypeName: pajarolanzamiento, Assembly-CSharp
+        m_MethodName: ReiniciarNivel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1594135148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6958,7 +6981,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1965025085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1104866587}
+        m_TargetAssemblyTypeName: pajarolanzamiento, Assembly-CSharp
+        m_MethodName: ReiniciarNivel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1965025085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7556,13 +7591,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3696b776e30a24fa31c8af68097620, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spritevida: {fileID: 4951402072122050558, guid: cca0a8b894c29404587f9d04398e1af1, type: 3}
-  puntuacionfinal: {fileID: 0}
+  vidaSpritePrefab: {fileID: 4951402072122050558, guid: cca0a8b894c29404587f9d04398e1af1, type: 3}
+  vidasContainer: {fileID: 2756827032486166743, guid: cca0a8b894c29404587f9d04398e1af1, type: 3}
+  puntuacionfinal: {fileID: 364345395}
   panelvictoria: {fileID: 1979864883}
+  panelderrota: {fileID: 1087182362}
   puntuacionrecord: {fileID: 364345395}
   PuntosfinalesDerrota: {fileID: 1774708960}
   posprimeravida: {x: -8, y: -4.5}
-  RecordDerrota: {fileID: 0}
+  RecordDerrota: {fileID: 1774708960}
+  metros: 0
   victoriaText: {fileID: 1093850628}
 --- !u!1 &2026064753
 GameObject:

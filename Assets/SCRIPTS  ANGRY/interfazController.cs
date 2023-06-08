@@ -5,80 +5,96 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
-using MyNamespace;
 
 public class interfazController : MonoBehaviour
 {
+    public GameObject vidaSpritePrefab;
+    public Transform vidasContainer;
 
-   
+    private List<GameObject> vidasSprites = new List<GameObject>();
 
-    public GameObject spritevida;
-
-    List<GameObject> spritevidas = new List<GameObject>();
-
-    [HideInInspector]
-    // public bool juegoDetenido = false;
     public TextMeshProUGUI puntuacionfinal;
     public GameObject panelvictoria;
+    public GameObject panelderrota;
     public TextMeshProUGUI puntuacionrecord;
     public TextMeshProUGUI PuntosfinalesDerrota;
-
     public Vector2 posprimeravida;
-
     public TextMeshProUGUI RecordDerrota;
-    float metros;
+    public float metros;
     public TextMeshProUGUI victoriaText;
 
-    private controldatos datosJuego;
+    private ControlDatosjuego datosJuego;
 
-
-    // Start is called before the first frame update
     void Start()
     {
-        
+        datosJuego = FindObjectOfType<ControlDatosjuego>();
+        CrearVidasSprites();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void setvidas(int vidas)
     {
-        if (vidas > 1)
-        {
-            Vector2 pos = posprimeravida;
-
-            for (int i = 1; i < vidas; i++)
-            {
-
-                GameObject sprite = Instantiate(spritevida, pos, Quaternion.identity);
-
-                spritevidas.Add(sprite);
-                pos = new Vector2(pos.x + 0.75f, pos.y);
-            }
-
-        }
-
+        datosJuego.VidasExtras = vidas - 1;
+        ActualizarVidasSprites();
     }
-    public void perdervida()
+
+    public void PerderVida()
     {
+        datosJuego.VidasExtras--;
 
-        if (spritevidas.Count > 0)
+        if (datosJuego.VidasExtras >= 0)
         {
-            spritevidas[spritevidas.Count - 1].SetActive(false);
-            spritevidas.RemoveAt(spritevidas.Count - 1);
-
+            vidasSprites[vidasSprites.Count - 1].SetActive(false);
+            vidasSprites.RemoveAt(vidasSprites.Count - 1);
         }
         else
         {
-
-            panelvictoria.SetActive(true);
-            PuntosfinalesDerrota.text = "puntuacion: " + datosJuego.Puntuacion.ToString();
-            RecordDerrota.text = "record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
-
-            //  audioSource.Stop();
-            //  audioSource.PlayOneShot(gameoverAudioClip);
+            MostrarPantallaDerrota();
         }
+    }
+
+    public void MostrarPantallaVictoria()
+    {
+        panelvictoria.SetActive(true);
+        puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
+        puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+        victoriaText.text = "¡HAS GANADO!";
+    }
+
+    public void MostrarPantallaDerrota()
+    {
+        panelderrota.SetActive(true);
+        PuntosfinalesDerrota.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
+        RecordDerrota.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+    }
+
+    public void VolverAlMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void ReintentarNivel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    private void CrearVidasSprites()
+    {
+        for (int i = 0; i < datosJuego.VidasExtras; i++)
+        {
+            GameObject vidaSprite = Instantiate(vidaSpritePrefab, vidasContainer);
+            vidasSprites.Add(vidaSprite);
+        }
+    }
+
+    public void ActualizarVidasSprites()
+    {
+        foreach (GameObject vidaSprite in vidasSprites)
+        {
+            Destroy(vidaSprite);
+        }
+
+        vidasSprites.Clear();
+
+        CrearVidasSprites();
     }
 }

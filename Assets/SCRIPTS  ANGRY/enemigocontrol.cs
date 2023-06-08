@@ -9,16 +9,17 @@ public class enemigocontrol : MonoBehaviour
 
     private int disparosRecibidos = 0;
 
-    private nextlevel nivelController; // Referencia al script "nextlevel"
+    private interfazController interfazController; // Referencia al script "interfazController"
+    private ControlDatosjuego datosJuego; // Referencia al script "ControlDatosjuego"
 
     private void Start()
     {
-        nivelController = FindObjectOfType<nextlevel>(); // Obtener una referencia al script "nextlevel"
+        interfazController = FindObjectOfType<interfazController>(); // Obtener una referencia al script "interfazController"
+        datosJuego = FindObjectOfType<ControlDatosjuego>(); // Obtener una referencia al script "ControlDatosjuego"
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("COLISION");
         if (other.gameObject.CompareTag("Pajaro"))
         {
             disparosRecibidos++;
@@ -27,7 +28,26 @@ public class enemigocontrol : MonoBehaviour
             {
                 Destroy(gameObject);
 
-                nivelController.LoadA("PantallaVictoria"); // Cargar la escena de victoria utilizando el método LoadA del script "nextlevel"
+                datosJuego.Ganado = true;
+                datosJuego.DesbloquearSiguienteNivel();
+
+                if (interfazController != null)
+                {
+                    interfazController.MostrarPantallaVictoria();
+                }
+            }
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (disparosRecibidos < disparosNecesarios)
+        {
+            datosJuego.Ganado = false;
+
+            if (interfazController != null)
+            {
+                interfazController.MostrarPantallaDerrota();
             }
         }
     }
