@@ -26,25 +26,25 @@ public class pajarolanzamiento : MonoBehaviour
     private bool juegoDetenido = false; // Variable para controlar si el juego está detenido
 
     private Vector2 initialPosition; // Posición inicial del pájaro
-      
-  
 
-    [HideInInspector]
-   // public bool juegoDetenido = false;
-    public TextMeshProUGUI puntuacionfinal;
-    public GameObject panelvictoria;
-    public TextMeshProUGUI puntuacionrecord;
-    float metros;
-    public TextMeshProUGUI victoriaText;
-    
-      public nextlevel nivelSiguiente;
+    private controldatos datosJuego;
+
+
+    public nextlevel nivelSiguiente;
+
+    private static interfazController controladorinterfaz;
 
     private void Start()
     {
         camara = Camera.main;
         bolaRigidbody = GetComponent<Rigidbody2D>();
         bolaSprintJoint = GetComponent<SpringJoint2D>();
+        datosJuego = GameObject.Find("datosJuego").GetComponent<controldatos>();
         bolaSprintJoint.connectedBody = pivote;
+
+        controladorinterfaz = GameObject.Find("controladorVictoria").GetComponent<interfazController>();
+
+
 
         initialPosition = transform.position; // Almacenar la posición inicial del pájaro
 
@@ -54,7 +54,9 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void Update()
     {
-        if (bolaRigidbody == null || juegoDetenido) { return; }
+        if (bolaRigidbody == null || juegoDetenido) { 
+            Debug.Log("null");
+            return; }
 
         if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
@@ -92,6 +94,9 @@ public class pajarolanzamiento : MonoBehaviour
 
         vidasExtras--; // Reducir el número de vidas extra
 
+       
+
+
         if (vidasExtras <= 0)
         {
             Invoke(nameof(FinJuego), tiempoFinJuego);
@@ -100,6 +105,7 @@ public class pajarolanzamiento : MonoBehaviour
         {
             Invoke(nameof(RespawnBola), respawnDelay);
         }
+        controladorinterfaz.perdervida();
     }
 
     private void RespawnBola()
@@ -111,11 +117,16 @@ public class pajarolanzamiento : MonoBehaviour
         nuevaBolaSprintJoint.connectedBody = pivote;
 
         pajaros.Add(bola); // Agregar el nuevo pájaro a la lista
-    }
 
+
+
+    }
+    
     private void FinJuego()
     {
-        SceneManager.LoadScene("FinNivel");
+        // cqargar canvas victoreia 
+        // esta desactivadoi, hay que actiuvarlo
+
         Debug.Log("Fin Juego");
     }
     void GuardarDatos(bool hasWon)
@@ -130,8 +141,18 @@ public class pajarolanzamiento : MonoBehaviour
     //GetComponent<BallBehaviour>().enabled = false;
 }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("cerdo"))
+        {
+            Debug.Log("Contar");
+            datosJuego.Puntuacion += datosJuego.puntosPorColision; // Incrementa la puntuación utilizando la propiedad Puntuacion
+        }
 
-public void ReiniciarNivel()
+
+    }
+
+    public void ReiniciarNivel()
 {
         // Cargar de nuevo la escena actual
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);

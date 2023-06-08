@@ -7,13 +7,13 @@ public class ControlFinNivel : MonoBehaviour
 {
 
     public TextMeshProUGUI mensajeFinalTexto;
-    private ControlDatosJuego datosjuegos;
+    private ControlDatosjuego datosjuegos;
 
 
 
     void Start()
     {
-        datosjuegos = GameObject.Find("DatosJuego").GetComponent<ControlDatosJuego>();
+        datosjuegos = GameObject.Find("datosJuego").GetComponent<ControlDatosjuego>();
         string mensajeFinal = "Numero de bolos:" + datosjuegos.Puntuacion;
         if (datosjuegos.Puntuacion == 6)
             mensajeFinal += "\n\n¡¡¡ ENHORABUENA !!!";

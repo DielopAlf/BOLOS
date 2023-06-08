@@ -1,19 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class controldatos : MonoBehaviour
 {
     private int puntuacion;
 
+    public TextMeshProUGUI PuntosTxt;
+
+    public int puntosPorColision = 20; // Valor de puntos a incrementar por cada colisión
+
     public int Puntuacion
     {
-        get => puntuacion; set => puntuacion = value;
+        get { return puntuacion; }
+        set
+        {
+            puntuacion = value;
+            PUNTOSTxt(puntuacion);
+        }
     }
+
+    public void PUNTOSTxt(int puntuacion)
+    {
+        PuntosTxt.text = "Puntuacion: " + puntuacion.ToString();
+    }
+
     private void Awake()
     {
 
-        int numinstancias = FindObjectsOfType<ControlDatosJuego>().Length;
+        int numinstancias = FindObjectsOfType<controldatos>().Length;
+
+        Debug.Log("DATOS+"+numinstancias);
 
         if (numinstancias != 1)
         {
