@@ -29,13 +29,13 @@ public class ControlDatosjuego : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        controldatos[] powerups = FindObjectsOfType<controldatos>();
+        controldatos[] cerdos = FindObjectsOfType<controldatos>();
 
-        if (powerups.Length > 0)
+        if (cerdos.Length > 0)
         {
-            foreach (controldatos powerup in powerups)
+            foreach (controldatos powerup in cerdos)
             {
-                // maxpuntuacion += powerup.cantidad;
+                
             }
         }
     }

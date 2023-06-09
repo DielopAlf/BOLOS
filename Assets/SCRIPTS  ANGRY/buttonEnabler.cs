@@ -10,6 +10,7 @@ public class buttonEnabler : MonoBehaviour
     void Awake()
     {
         int superado = PlayerPrefs.GetInt("NivelSuperado" + (nivel - 1).ToString(), 0);
+        Debug.Log(superado + " hemos leido este valor");
         GetComponent<Button>().interactable = superado == 1 ? true : false;
     }
 }

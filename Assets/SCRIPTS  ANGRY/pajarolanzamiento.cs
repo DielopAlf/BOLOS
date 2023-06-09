@@ -7,6 +7,8 @@ using TMPro;
 using UnityEngine.UI;
 using MyNamespace;
 
+
+
 public class pajarolanzamiento : MonoBehaviour
 {
     public GameObject bolaPrefab;
@@ -30,10 +32,20 @@ public class pajarolanzamiento : MonoBehaviour
     private interfazController controladorInterfaz;
     private bool haGanado = false; // Variable para verificar si el jugador ha ganado el juego
 
+    public  int nivel; 
+
     private int cerdosRestantes; // Número de cerdos restantes en la escena
+
+    private bool sehalanzado = false;
+
+    private bool hatocado = false;
 
     private void Start()
     {
+        sehalanzado = false;
+
+        hatocado = false;
+
         camara = Camera.main;
         bolaRigidbody = GetComponent<Rigidbody2D>();
         bolaSprintJoint = GetComponent<SpringJoint2D>();
@@ -48,18 +60,36 @@ public class pajarolanzamiento : MonoBehaviour
 
         // Obtener el número inicial de cerdos en la escena
         cerdosRestantes = GameObject.FindGameObjectsWithTag("cerdo").Length;
+
+
+
     }
 
     private void Update()
     {
+
+
+        if (sehalanzado == true)
+        {
+            if (Touchscreen.current.primaryTouch.press.isPressed && hatocado == false)
+            {
+                hatocado = true;
+                Debug.Log("hatocado");
+            }
+
+
+        }
+
         if (bolaRigidbody == null || juegoDetenido)
             return;
+
 
         if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
             if (estaArrastrando)
             {
                 LanzarBola();
+               
             }
 
             estaArrastrando = false;
@@ -67,6 +97,7 @@ public class pajarolanzamiento : MonoBehaviour
         }
 
         estaArrastrando = true;
+       
         bolaRigidbody.isKinematic = true;
 
         Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
@@ -76,16 +107,21 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void LanzarBola()
     {
+        sehalanzado = true;
+
         bolaRigidbody.isKinematic = false;
         bolaRigidbody = null;
 
         bolaSprintJoint.enabled = true; // Reactivar el SpringJoint
 
         Invoke(nameof(QuitarSprintJoin), tiempoQuitarSprintJoin);
+        
     }
 
     private void QuitarSprintJoin()
     {
+
+        Debug.Log("se disparo");
         bolaSprintJoint.enabled = false;
         bolaSprintJoint = null;
 
@@ -128,8 +164,12 @@ public class pajarolanzamiento : MonoBehaviour
 
         if (victoria)
         {
+            PlayerPrefs.SetInt("NivelSuperado" + nivel.ToString(), 1);
+            PlayerPrefs.Save();
+
             controladorInterfaz.MostrarPantallaVictoria(); // Mostrar la interfaz de victoria
-           // FindObjectOfType<nextlevel>().DesbloquearSiguienteNivel(); // Desbloquear el siguiente nivel
+            //FindObjectOfType<nextlevel>().DesbloquearSiguienteNivel(); // Desbloquear el siguiente nivel
+            
         }
         else
         {
@@ -166,5 +206,11 @@ public class pajarolanzamiento : MonoBehaviour
     {
         SceneManager.LoadScene("Titulo"); // Cargar la escena del menú principal
         Time.timeScale = 1; // Restablecer la escala de tiempo del juego
+    }
+    public void ClearAllData()
+    {
+        PlayerPrefs.DeleteAll();
+        System.IO.Directory.Delete(Application.persistentDataPath, true);
+        Debug.Log("Todos los datos del juego han sido eliminados.");
     }
 }
