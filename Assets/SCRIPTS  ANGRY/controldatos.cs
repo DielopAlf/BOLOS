@@ -24,16 +24,16 @@ public class controldatos : MonoBehaviour
 
     public void PUNTOSTxt(int puntuacion)
     {
-        PuntosTxt.text = "Puntuacion: " + puntuacion.ToString();
+        PuntosTxt.text = "Puntuación: " + puntuacion.ToString();
     }
 
     private void Awake()
     {
-        int numinstancias = FindObjectsOfType<controldatos>().Length;
+        int numInstancias = FindObjectsOfType<controldatos>().Length;
 
-        Debug.Log("DATOS+"+numinstancias);
+        Debug.Log("DATOS+" + numInstancias);
 
-        if (numinstancias != 1)
+        if (numInstancias != 1)
         {
             Destroy(this.gameObject);
         }

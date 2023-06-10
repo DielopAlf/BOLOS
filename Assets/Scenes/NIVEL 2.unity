@@ -6832,6 +6832,8 @@ MonoBehaviour:
   vidasExtras: 4
   respawnDelay: 2
   nivel: 2
+  factorEscala: 1.2
+  escalaMaxima: 3
 --- !u!231 &2096293809
 SpringJoint2D:
   m_ObjectHideFlags: 0

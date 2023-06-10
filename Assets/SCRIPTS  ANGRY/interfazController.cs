@@ -1,10 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
-using UnityEngine.UI;
 
 public class interfazController : MonoBehaviour
 {
@@ -24,47 +22,76 @@ public class interfazController : MonoBehaviour
     public TextMeshProUGUI victoriaText;
 
     private ControlDatosjuego datosJuego;
+    private bool partidaTerminada = false;
 
-    void Start()
+    private void Start()
     {
         datosJuego = FindObjectOfType<ControlDatosjuego>();
-        CrearVidasSprites();
+        if (datosJuego == null)
+        {
+            Debug.LogError("No se encontró el objeto ControlDatosjuego en la escena.");
+        }
+        else
+        {
+            CrearVidasSprites();
+        }
     }
 
     public void setvidas(int vidas)
     {
-        datosJuego.VidasExtras = vidas - 1;
-        ActualizarVidasSprites();
+        if (datosJuego != null)
+        {
+            datosJuego.VidasExtras = vidas - 1;
+            ActualizarVidasSprites();
+        }
     }
 
     public void PerderVida()
     {
-        datosJuego.VidasExtras--;
+        if (datosJuego != null)
+        {
+            datosJuego.VidasExtras--;
 
-        if (datosJuego.VidasExtras >= 0)
-        {
-            vidasSprites[vidasSprites.Count - 1].SetActive(false);
-            vidasSprites.RemoveAt(vidasSprites.Count - 1);
-        }
-        else
-        {
-            MostrarPantallaDerrota();
+            if (datosJuego.VidasExtras >= 0)
+            {
+                if (vidasSprites.Count > 0)
+                {
+                    vidasSprites[vidasSprites.Count - 1].SetActive(false);
+                    vidasSprites.RemoveAt(vidasSprites.Count - 1);
+                }
+                else
+                {
+                    Debug.LogError("No hay suficientes sprites de vida para eliminar.");
+                }
+            }
+            else
+            {
+                MostrarPantallaDerrota();
+            }
         }
     }
 
     public void MostrarPantallaVictoria()
     {
-        panelvictoria.SetActive(true);
-        puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
-        puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
-        victoriaText.text = "¡HAS GANADO!";
+        if (!partidaTerminada)
+        {
+            partidaTerminada = true;
+            panelvictoria.SetActive(true);
+            puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
+            puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+            victoriaText.text = "¡HAS GANADO!";
+        }
     }
 
     public void MostrarPantallaDerrota()
     {
-        panelderrota.SetActive(true);
-        PuntosfinalesDerrota.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
-        RecordDerrota.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+        if (!partidaTerminada)
+        {
+            partidaTerminada = true;
+            panelderrota.SetActive(true);
+            PuntosfinalesDerrota.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
+            RecordDerrota.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+        }
     }
 
     public void VolverAlMenu()
@@ -79,14 +106,21 @@ public class interfazController : MonoBehaviour
 
     private void CrearVidasSprites()
     {
-        for (int i = 0; i < datosJuego.VidasExtras; i++)
+        if (vidasContainer != null && vidaSpritePrefab != null)
         {
-            GameObject vidaSprite = Instantiate(vidaSpritePrefab, vidasContainer);
-            vidasSprites.Add(vidaSprite);
+            for (int i = 0; i < datosJuego.VidasExtras; i++)
+            {
+                GameObject vidaSprite = Instantiate(vidaSpritePrefab, vidasContainer);
+                vidasSprites.Add(vidaSprite);
+            }
+        }
+        else
+        {
+            Debug.LogError("El contenedor de vidas o el prefab del sprite de vida no están asignados.");
         }
     }
 
-    public void ActualizarVidasSprites()
+    private void ActualizarVidasSprites()
     {
         foreach (GameObject vidaSprite in vidasSprites)
         {
