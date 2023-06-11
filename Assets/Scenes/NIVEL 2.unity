@@ -2294,7 +2294,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -243331344, guid: 266ad43421c10b94b9c33d0cd7066a00, type: 3}
+  m_Sprite: {fileID: -1232747838, guid: 266ad43421c10b94b9c33d0cd7066a00, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -6829,6 +6829,7 @@ MonoBehaviour:
   pivote: {fileID: 79887072}
   tiempoQuitarSprintJoin: 0.15
   tiempoFinJuego: 10
+  tiempoEsperaPantallaVictoriaDerrota: 0
   vidasExtras: 4
   respawnDelay: 2
   nivel: 2

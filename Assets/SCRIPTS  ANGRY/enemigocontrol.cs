@@ -11,11 +11,14 @@ public class enemigocontrol : MonoBehaviour
 
     private interfazController interfazController; // Referencia al script "interfazController"
     private ControlDatosjuego datosJuego; // Referencia al script "ControlDatosjuego"
+    public AudioClip golpeSound;
+    private AudioSource audioSource;
 
     private void Start()
     {
         interfazController = FindObjectOfType<interfazController>(); // Obtener una referencia al script "interfazController"
         datosJuego = FindObjectOfType<ControlDatosjuego>(); // Obtener una referencia al script "ControlDatosjuego"
+        audioSource = GetComponent<AudioSource>(); // Obtener el componente AudioSource
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -29,12 +32,16 @@ public class enemigocontrol : MonoBehaviour
                 Destroy(gameObject);
 
                 datosJuego.Ganado = true;
-              
 
                 if (interfazController != null)
                 {
                     interfazController.MostrarPantallaVictoria();
                 }
+            }
+            else
+            {
+                // Reproducir el sonido de golpe
+                audioSource.PlayOneShot(golpeSound);
             }
         }
     }
