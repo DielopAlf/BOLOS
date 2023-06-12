@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 18467017}
   - component: {fileID: 18467016}
   m_Layer: 0
-  m_Name: datosJuego
+  m_Name: ControlDatosJuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4675,6 +4675,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuntosTxt: {fileID: 570015911}
+  RecordTxt: {fileID: 0}
   puntosPorColision: 20
   numeroDeCerdos: 0
 --- !u!114 &1365904158

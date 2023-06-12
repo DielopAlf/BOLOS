@@ -96,11 +96,15 @@ public class interfazController : MonoBehaviour
 
     public void VolverAlMenu()
     {
+        datosJuego.Puntuacion = 0; // Reset the score
+        datosJuego.VidasExtras = 0; // Reset the remaining lives
+        datosJuego.Ganado = false; // Reset the win state
         SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void ReintentarNivel()
     {
+        datosJuego.Puntuacion = 0; // Reset the score
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
