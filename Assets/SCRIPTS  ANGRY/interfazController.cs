@@ -21,12 +21,13 @@ public class interfazController : MonoBehaviour
     public float metros;
     public TextMeshProUGUI victoriaText;
 
-    private ControlDatosjuego datosJuego;
+    public ControlDatosjuego datosJuego;
     private bool partidaTerminada = false;
 
     private void Start()
     {
-        datosJuego = FindObjectOfType<ControlDatosjuego>();
+        datosJuego = ControlDatosjuego.instance;
+
         if (datosJuego == null)
         {
             Debug.LogError("No se encontró el objeto ControlDatosjuego en la escena.");
@@ -35,6 +36,7 @@ public class interfazController : MonoBehaviour
         {
             CrearVidasSprites();
         }
+
     }
 
     public void setvidas(int vidas)
@@ -96,15 +98,11 @@ public class interfazController : MonoBehaviour
 
     public void VolverAlMenu()
     {
-        datosJuego.Puntuacion = 0; // Reset the score
-        datosJuego.VidasExtras = 0; // Reset the remaining lives
-        datosJuego.Ganado = false; // Reset the win state
         SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void ReintentarNivel()
     {
-        datosJuego.Puntuacion = 0; // Reset the score
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

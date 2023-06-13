@@ -123,50 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &18467015
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 18467017}
-  - component: {fileID: 18467016}
-  m_Layer: 0
-  m_Name: ControlDatosJuego
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &18467016
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18467015}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c70f797b4203704e9e672bae7a768c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &18467017
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18467015}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4558344, y: -1.1108762, z: -0.14665854}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 22
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &42773385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3608,6 +3564,11 @@ MonoBehaviour:
   nivel: 1
   factorEscala: 2
   escalaMaxima: 3
+  maxSpringRange: 1.35
+  camInitialPos: {x: 0, y: 0}
+  camInitialSize: 5
+  camSiguiendoPajaroZoom: 3.5
+  timeToResetCam: 1.8
 --- !u!82 &1104866588
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4640,8 +4601,9 @@ GameObject:
   - component: {fileID: 1365904156}
   - component: {fileID: 1365904157}
   - component: {fileID: 1365904158}
+  - component: {fileID: 1365904159}
   m_Layer: 0
-  m_Name: Controldatos
+  m_Name: DatosJuego
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4675,7 +4637,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PuntosTxt: {fileID: 570015911}
-  RecordTxt: {fileID: 0}
   puntosPorColision: 20
   numeroDeCerdos: 0
 --- !u!114 &1365904158
@@ -4688,6 +4649,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 267f7b657874e994daf0f3c738a9c6c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1365904159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365904155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c70f797b4203704e9e672bae7a768c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1375145063
@@ -5012,6 +4985,7 @@ MonoBehaviour:
   RecordDerrota: {fileID: 1774708960}
   metros: 0
   victoriaText: {fileID: 1093850628}
+  datosJuego: {fileID: 0}
 --- !u!4 &1402216352
 Transform:
   m_ObjectHideFlags: 0

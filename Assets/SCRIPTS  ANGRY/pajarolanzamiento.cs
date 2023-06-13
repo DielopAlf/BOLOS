@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class pajarolanzamiento : MonoBehaviour
 {
@@ -43,6 +44,21 @@ public class pajarolanzamiento : MonoBehaviour
     private bool puedeCrecer = true;
     private bool ultimoPajaroLanzado = false;
 
+
+
+
+
+    public float maxSpringRange = 1.35f;
+    public Vector2 camInitialPos = new Vector2(0, 0);
+    public float camInitialSize = 5;
+    public float camSiguiendoPajaroZoom = 2.35f;
+    public float timeToResetCam = 1.2f;
+    private float timerCam;
+
+
+
+
+
     private float tiempoUltimoPajaroQuieto; // Variable para el tiempo que lleva el último pájaro quieto
 
     private void Start()
@@ -63,6 +79,8 @@ public class pajarolanzamiento : MonoBehaviour
         pajaros = new List<GameObject>();
         pajaros.Add(gameObject);
 
+        timerCam = timeToResetCam;
+
         cerdosRestantes = GameObject.FindGameObjectsWithTag("cerdo").Length;
     }
 
@@ -70,6 +88,8 @@ public class pajarolanzamiento : MonoBehaviour
     {
         if (sehalanzado == true)
         {
+            CheckFullStop();
+            CamaraSiguePajaro();
             if (Touchscreen.current.primaryTouch.press.isPressed && hatocado == false && puedeCrecer)
             {
                 hatocado = true;
@@ -84,6 +104,7 @@ public class pajarolanzamiento : MonoBehaviour
                     }
                 }
             }
+
         }
 
         if (bolaRigidbody == null || juegoDetenido)
@@ -103,9 +124,26 @@ public class pajarolanzamiento : MonoBehaviour
         estaArrastrando = true;
         bolaRigidbody.isKinematic = true;
 
+
         Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
         Vector3 posicionMundo = camara.ScreenToWorldPoint(posicionTocar);
-        bolaRigidbody.position = posicionMundo;
+
+        Vector3 distance = posicionMundo - pivote.transform.position;
+        distance.z = 0;
+
+
+
+        if (distance.magnitude > maxSpringRange)
+        {
+            Vector3 dis = new Vector3(distance.x, distance.y, 0f);
+            dis = dis.normalized * maxSpringRange;
+
+            distance = distance.normalized * maxSpringRange;
+
+        }
+        bolaRigidbody.position = distance + pivote.transform.position;
+
+
     }
 
     private void LanzarBola()
@@ -118,6 +156,45 @@ public class pajarolanzamiento : MonoBehaviour
         bolaSprintJoint.enabled = true;
 
         Invoke(nameof(QuitarSprintJoin), tiempoQuitarSprintJoin);
+    }
+
+    private void CamaraSiguePajaro()
+    {
+        if (sehalanzado && timerCam != -1 && camara != null)
+        {
+            camara.orthographicSize = camSiguiendoPajaroZoom;
+            camara.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -12.1f);
+        }
+    }
+
+    private void CamaraToNormal()
+    {
+        if (camara != null)
+        {
+            camara.orthographicSize = camInitialSize;
+            camara.transform.position = new Vector3(camInitialPos.x, camInitialPos.y, -12.1f);
+            timerCam = -1;
+            camara = null;
+        }
+
+    }
+
+    private void CheckFullStop()
+    {
+        //Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
+
+        if (GetComponent<Rigidbody2D>().angularVelocity < 3f)
+        {
+            timerCam -= Time.deltaTime;
+            if (timerCam <= 0f)
+            {
+                CamaraToNormal();
+            }
+        }
+        else
+        {
+            timerCam = timeToResetCam;
+        }
     }
 
     private void QuitarSprintJoin()
@@ -192,6 +269,7 @@ public class pajarolanzamiento : MonoBehaviour
 
     private IEnumerator MostrarPantallaVictoriaDerrota(bool victoria, float tiempoEspera)
     {
+
         yield return new WaitForSecondsRealtime(tiempoEspera);
 
         if (victoria)
