@@ -12,6 +12,7 @@ public class enemigocontrol : MonoBehaviour
     private interfazController interfazController; // Referencia al script "interfazController"
     private ControlDatosjuego datosJuego; // Referencia al script "ControlDatosjuego"
     public AudioClip golpeSound;
+    public AudioClip destruccionSound;
     private AudioSource audioSource;
 
     private void Start()
@@ -37,6 +38,9 @@ public class enemigocontrol : MonoBehaviour
                 {
                     interfazController.MostrarPantallaVictoria();
                 }
+
+                // Reproducir el sonido de destrucción
+                audioSource.PlayOneShot(destruccionSound);
             }
             else
             {

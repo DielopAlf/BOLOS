@@ -1310,6 +1310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disparosNecesarios: 1
   golpeSound: {fileID: 0}
+  destruccionSound: {fileID: 0}
 --- !u!58 &327576294
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1748,6 +1749,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   disparosNecesarios: 1
   golpeSound: {fileID: 0}
+  destruccionSound: {fileID: 0}
 --- !u!58 &497151546
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4660,7 +4662,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1365904155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c70f797b4203704e9e672bae7a768c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 63a87f825910c7f4d9d16c372db28083, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1375145063
@@ -4985,7 +4987,7 @@ MonoBehaviour:
   RecordDerrota: {fileID: 1774708960}
   metros: 0
   victoriaText: {fileID: 1093850628}
-  datosJuego: {fileID: 0}
+  datosJuego: {fileID: 1365904159}
 --- !u!4 &1402216352
 Transform:
   m_ObjectHideFlags: 0
