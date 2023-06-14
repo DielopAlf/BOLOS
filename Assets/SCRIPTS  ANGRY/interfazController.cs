@@ -12,14 +12,17 @@ public class interfazController : MonoBehaviour
     private List<GameObject> vidasSprites = new List<GameObject>();
 
     public TextMeshProUGUI puntuacionfinal;
-    public GameObject panelvictoria;
-    public GameObject panelderrota;
+    public GameObject panelfinal;
+    public GameObject victoria;
+    public GameObject derrota;
+
     public TextMeshProUGUI puntuacionrecord;
-    public TextMeshProUGUI PuntosfinalesDerrota;
     public Vector2 posprimeravida;
     public TextMeshProUGUI RecordDerrota;
     public float metros;
     public TextMeshProUGUI victoriaText;
+
+    public TextMeshProUGUI PuntosTxt;
 
     public ControlDatosjuego datosJuego;
     private bool partidaTerminada = false;
@@ -52,7 +55,6 @@ public class interfazController : MonoBehaviour
     {
         if (datosJuego != null)
         {
-            datosJuego.VidasExtras--;
 
             if (datosJuego.VidasExtras >= 0)
             {
@@ -78,9 +80,11 @@ public class interfazController : MonoBehaviour
         if (!partidaTerminada)
         {
             partidaTerminada = true;
-            panelvictoria.SetActive(true);
+            panelfinal.SetActive(true);
+            victoria.SetActive(true);
+            derrota.SetActive(false);
             puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
-            puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+            puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("Record" + SceneManager.GetActiveScene().name, 0).ToString();
             victoriaText.text = "¡HAS GANADO!";
         }
     }
@@ -90,9 +94,12 @@ public class interfazController : MonoBehaviour
         if (!partidaTerminada)
         {
             partidaTerminada = true;
-            panelderrota.SetActive(true);
-            PuntosfinalesDerrota.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
-            RecordDerrota.text = "Record: " + PlayerPrefs.GetInt("record" + SceneManager.GetActiveScene().name, 0).ToString();
+            panelfinal.SetActive(true);
+            victoria.SetActive(false);
+            derrota.SetActive(true);
+            puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
+            RecordDerrota.text = "Record: " + PlayerPrefs.GetInt("Record" + SceneManager.GetActiveScene().name, 0).ToString();
+            victoriaText.text = "¡HAS PERDIDO!";
         }
     }
 
@@ -132,5 +139,10 @@ public class interfazController : MonoBehaviour
         vidasSprites.Clear();
 
         CrearVidasSprites();
+    }
+
+    public void ActualizarPuntuacionActual(int puntuacion)
+    {
+        PuntosTxt.text = "Puntuación: " + puntuacion.ToString();
     }
 }

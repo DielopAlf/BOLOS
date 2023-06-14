@@ -9,8 +9,8 @@ using Unity.VisualScripting;
 
 public class pajarolanzamiento : MonoBehaviour
 {
-    public GameObject bolaPrefab;
-    public Rigidbody2D pivote;
+    
+    private Rigidbody2D pivote;
     public float tiempoQuitarSprintJoin;
     public float tiempoFinJuego;
     public float tiempoEsperaPantallaVictoriaDerrota;
@@ -28,7 +28,7 @@ public class pajarolanzamiento : MonoBehaviour
     private Vector2 initialPosition;
     private Vector3 escalaInicial;
 
-    private controldatos datosJuego;
+    private ControlDatosjuego datosJuego;
     private interfazController controladorInterfaz;
     private bool haGanado = false;
 
@@ -45,31 +45,40 @@ public class pajarolanzamiento : MonoBehaviour
     private bool ultimoPajaroLanzado = false;
 
 
-
+    public GameObject[] pajarosegundo;
 
 
     public float maxSpringRange = 1.35f;
     public Vector2 camInitialPos = new Vector2(0, 0);
     public float camInitialSize = 5;
     public float camSiguiendoPajaroZoom = 2.35f;
-    public float timeToResetCam = 1.2f;
-    private float timerCam;
+    private float timerToFinish;
+    public float timeToFinish = 5;
 
+    public enum habilidadespecial { ninguno,crecer };
 
-
-
+    public habilidadespecial especial;
 
     private float tiempoUltimoPajaroQuieto; // Variable para el tiempo que lleva el último pájaro quieto
 
     private void Start()
     {
+        if (GameObject.FindGameObjectsWithTag("pivote").Length>0)
+        {
+            pivote = GameObject.FindGameObjectsWithTag("pivote")[0].GetComponent<Rigidbody2D>();
+
+        }
+       
+
         sehalanzado = false;
         hatocado = false;
+
+        datosJuego = ControlDatosjuego.instance;
 
         camara = Camera.main;
         bolaRigidbody = GetComponent<Rigidbody2D>();
         bolaSprintJoint = GetComponent<SpringJoint2D>();
-        datosJuego = FindObjectOfType<controldatos>();
+
         controladorInterfaz = FindObjectOfType<interfazController>();
         //bolaSprintJoint.connectedBody = pivote;
 
@@ -79,13 +88,14 @@ public class pajarolanzamiento : MonoBehaviour
         pajaros = new List<GameObject>();
         pajaros.Add(gameObject);
 
-        timerCam = timeToResetCam;
+        timerToFinish = timeToFinish;
 
         cerdosRestantes = GameObject.FindGameObjectsWithTag("cerdo").Length;
     }
 
     private void Update()
     {
+        Debug.Log("hola");
         if (sehalanzado == true)
         {
             CheckFullStop();
@@ -93,15 +103,10 @@ public class pajarolanzamiento : MonoBehaviour
             if (Touchscreen.current.primaryTouch.press.isPressed && hatocado == false && puedeCrecer)
             {
                 hatocado = true;
-
+                ataqueespecial();
                 if (!ultimoPajaroLanzado)
                 {
-                    // Aumentar el tamaño del pájaro si no ha alcanzado el tamaño máximo
-                    if (transform.localScale.x < escalaMaxima && transform.localScale.y < escalaMaxima)
-                    {
-                        Vector3 nuevaEscala = transform.localScale * factorEscala;
-                        transform.localScale = nuevaEscala;
-                    }
+                    
                 }
             }
 
@@ -112,6 +117,7 @@ public class pajarolanzamiento : MonoBehaviour
 
         if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
+            Debug.Log("prueba");
             if (estaArrastrando)
             {
                 LanzarBola();
@@ -160,7 +166,7 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void CamaraSiguePajaro()
     {
-        if (sehalanzado && timerCam != -1 && camara != null)
+        if (sehalanzado && camara != null)
         {
             camara.orthographicSize = camSiguiendoPajaroZoom;
             camara.transform.position = new Vector3(gameObject.transform.position.x, gameObject.transform.position.y, -12.1f);
@@ -173,7 +179,6 @@ public class pajarolanzamiento : MonoBehaviour
         {
             camara.orthographicSize = camInitialSize;
             camara.transform.position = new Vector3(camInitialPos.x, camInitialPos.y, -12.1f);
-            timerCam = -1;
             camara = null;
         }
 
@@ -181,19 +186,38 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void CheckFullStop()
     {
-        //Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
-
-        if (GetComponent<Rigidbody2D>().angularVelocity < 3f)
+        timerToFinish -= Time.deltaTime;
+        if (timerToFinish <= 0f)
         {
-            timerCam -= Time.deltaTime;
-            if (timerCam <= 0f)
+            CamaraToNormal();
+            if (!haGanado)
             {
-                CamaraToNormal();
+                if (datosJuego.VidasExtras <= 0)
+                {
+                    //si quiero que aparezca cuando los mate a todos
+                    //FinJuego(false);
+
+                    // si quiero    ue aparezca con matar a uno
+                    if (datosJuego.Puntuacion>0)
+                    {
+                        FinJuego(true);
+
+                    }
+                    else
+                    {
+
+                        FinJuego(false);
+
+                    }
+                }
+                else
+                {
+                    RespawnBola();
+                }
             }
-        }
-        else
-        {
-            timerCam = timeToResetCam;
+
+            this.enabled = false;
+
         }
     }
 
@@ -202,75 +226,90 @@ public class pajarolanzamiento : MonoBehaviour
         bolaSprintJoint.enabled = false;
         bolaSprintJoint = null;
 
-        vidasExtras--;
-
-        if (vidasExtras <= 0 && !haGanado)
-        {
-            if (datosJuego.Puntuacion >= datosJuego.puntosPorColision * cerdosRestantes)
-            {
-                haGanado = true;
-                FinJuego(true);
-            }
-            else
-            {
-                FinJuego(false);
-            }
-        }
-        else
-        {
-            Invoke(nameof(RespawnBola), respawnDelay);
-        }
+        datosJuego.VidasExtras--;
 
         controladorInterfaz.PerderVida();
     }
 
+    public void ataqueespecial()
+    {
+
+        switch(especial)
+        {
+            case habilidadespecial.ninguno:
+                break;
+            case habilidadespecial.crecer:
+                // Aumentar el tamaño del pájaro si no ha alcanzado el tamaño máximo
+                if (transform.localScale.x < escalaMaxima && transform.localScale.y < escalaMaxima)
+                {
+                    Vector3 nuevaEscala = transform.localScale * factorEscala;
+                    transform.localScale = nuevaEscala;
+                }
+                break;
+
+        }
+
+
+    }
+
     private void RespawnBola()
     {
-        GameObject bola = Instantiate(bolaPrefab, initialPosition, Quaternion.identity);
+        GameObject bola= null;
+
+
+        if (datosJuego.VidasExtras==1)
+        {
+
+             bola = Instantiate(pajarosegundo[1], initialPosition, Quaternion.identity);
+
+        }
+        else
+        {
+
+             bola = Instantiate(pajarosegundo[0], initialPosition, Quaternion.identity);
+        }
+
+     
         Rigidbody2D nuevaBolaRigidbody = bola.GetComponent<Rigidbody2D>();
         SpringJoint2D nuevaBolaSprintJoint = bola.GetComponent<SpringJoint2D>();
         nuevaBolaRigidbody.isKinematic = true;
         nuevaBolaSprintJoint.connectedBody = pivote;
         bola.transform.localScale = escalaInicial;
-
+        
         pajaros.Add(bola);
         puedeCrecer = false;
 
-        if (vidasExtras <= 0 && cerdosRestantes > 0)
+        if (datosJuego.VidasExtras <= 0 && datosJuego.numeroDeCerdos > 0)
         {
             ultimoPajaroLanzado = true;
             tiempoUltimoPajaroQuieto = Time.time; // Guardar el tiempo en el que el último pájaro se queda quieto
         }
     }
 
-    private void FinJuego(bool victoria)
+    public void FinJuego(bool victoria)
     {
         juegoDetenido = true;
+        datosJuego.SaveRecord();
 
         if (victoria)
         {
+            haGanado = true;
             PlayerPrefs.SetInt("NivelSuperado" + nivel.ToString(), 1);
             PlayerPrefs.Save();
 
-            StartCoroutine(MostrarPantallaVictoriaDerrota(true, tiempoEsperaPantallaVictoriaDerrota));
+            MostrarPantallaVictoriaDerrota(true);
         }
         else
         {
-            StartCoroutine(MostrarPantallaVictoriaDerrota(false, tiempoEsperaPantallaVictoriaDerrota));
+            MostrarPantallaVictoriaDerrota(false);
         }
 
         Time.timeScale = 0;
     }
 
-    private void FinJuegoSinVictoria()
-    {
-        FinJuego(false);
-    }
 
-    private IEnumerator MostrarPantallaVictoriaDerrota(bool victoria, float tiempoEspera)
+    private void MostrarPantallaVictoriaDerrota(bool victoria)
     {
-
-        yield return new WaitForSecondsRealtime(tiempoEspera);
 
         if (victoria)
         {
@@ -280,8 +319,9 @@ public class pajarolanzamiento : MonoBehaviour
             }
             else
             {
-                controladorInterfaz.MostrarPantallaVictoria();
+                //controladorInterfaz.MostrarPantallaVictoria();
             }
+            controladorInterfaz.MostrarPantallaVictoria();
         }
         else
         {
@@ -289,27 +329,13 @@ public class pajarolanzamiento : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("cerdo"))
-        {
-            datosJuego.Puntuacion += datosJuego.puntosPorColision;
-            cerdosRestantes--;
-
-            if (!haGanado && cerdosRestantes <= 0)
-            {
-                haGanado = true;
-                FinJuego(true);
-            }
-        }
-    }
 
     private void LateUpdate()
     {
         // Comprobar si el último pájaro lanzado está quieto y mostrar la pantalla de derrota si se cumple el tiempo límite
         if (ultimoPajaroLanzado && Time.time - tiempoUltimoPajaroQuieto >= tiempoFinJuego)
         {
-            FinJuegoSinVictoria();
+            //FinJuegoSinVictoria();
         }
     }
     public void ReiniciarNivel()

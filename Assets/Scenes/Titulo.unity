@@ -503,7 +503,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 487454899}
         m_TargetAssemblyTypeName: nextlevel, Assembly-CSharp
         m_MethodName: LoadA
         m_Mode: 5
@@ -945,13 +945,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c81d2a18ba3c024fbd8fe1d16434ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bolaPrefab: {fileID: 0}
-  pivote: {fileID: 0}
   tiempoQuitarSprintJoin: 0
   tiempoFinJuego: 0
+  tiempoEsperaPantallaVictoriaDerrota: 0
   vidasExtras: 3
   respawnDelay: 2
   nivel: 0
+  factorEscala: 1.2
+  escalaMaxima: 2
+  pajarosegundo: []
+  maxSpringRange: 1.35
+  camInitialPos: {x: 0, y: 0}
+  camInitialSize: 5
+  camSiguiendoPajaroZoom: 2.35
+  timeToFinish: 5
+  especial: 0
 --- !u!114 &487454901
 MonoBehaviour:
   m_ObjectHideFlags: 0

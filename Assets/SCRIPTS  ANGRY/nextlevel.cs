@@ -5,11 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class nextlevel : MonoBehaviour
 {
-    
+
 
     void Start()
     {
-        Debug.Log("cargarnivel2");
+        //Debug.Log("cargarnivel2");
     }
 
     public void LoadA(string nivel)
@@ -17,5 +17,6 @@ public class nextlevel : MonoBehaviour
         SceneManager.LoadScene(nivel);
     }
 
-   
+
+
 }

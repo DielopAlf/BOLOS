@@ -10,7 +10,9 @@ public class controldatos : MonoBehaviour
     public TextMeshProUGUI PuntosTxt;
 
     public int puntosPorColision = 20; // Valor de puntos a incrementar por cada colisión
-    public int numeroDeCerdos; // Número total de cerdos en el nivel
+
+
+    public static controldatos instance;
 
     public int Puntuacion
     {
@@ -29,17 +31,13 @@ public class controldatos : MonoBehaviour
 
     private void Awake()
     {
-        int numInstancias = FindObjectsOfType<controldatos>().Length;
-
-        Debug.Log("DATOS+" + numInstancias);
-
-        if (numInstancias != 1)
+        if (instance != null && instance != this)
         {
-            Destroy(this.gameObject);
+            Destroy(this);
         }
         else
         {
-            DontDestroyOnLoad(this.gameObject);
+            instance = this;
         }
     }
 }

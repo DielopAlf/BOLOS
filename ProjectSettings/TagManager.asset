@@ -8,6 +8,7 @@ TagManager:
   - Pajaro
   - cerdo
   - pared
+  - pivote
   layers:
   - Default
   - TransparentFX
