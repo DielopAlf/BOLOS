@@ -15,22 +15,29 @@ namespace MyNamespace
 
     public class MenuControl : MonoBehaviour
     {
+        
         public GameObject menuInicial;
         public GameObject menuNiveles;
+
+        public AudioSource audioSource;
+        public AudioClip interfazaudio;
 
         void Start()
         {
             menuInicial.SetActive(true);
             menuNiveles.SetActive(false);
+            audioSource = GameObject.Find("controllador").GetComponent<AudioSource>();
         }
 
         public void cerrarjuego()
         {
             Application.Quit();
+            audioSource.PlayOneShot(interfazaudio);
         }
 
         public void botonplay()
         {
+            audioSource.PlayOneShot(interfazaudio);
             menuInicial.SetActive(false);
             menuNiveles.SetActive(true);
             Debug.Log("jugar");
@@ -40,6 +47,7 @@ namespace MyNamespace
         {
             menuInicial.SetActive(true);
             menuNiveles.SetActive(false);
+            audioSource.PlayOneShot(interfazaudio);
         }
         public void ClearAllData()
     {

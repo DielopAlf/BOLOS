@@ -9,7 +9,6 @@ using Unity.VisualScripting;
 
 public class pajarolanzamiento : MonoBehaviour
 {
-    
     private Rigidbody2D pivote;
     public float tiempoQuitarSprintJoin;
     public float tiempoFinJuego;
@@ -44,9 +43,7 @@ public class pajarolanzamiento : MonoBehaviour
     private bool puedeCrecer = true;
     private bool ultimoPajaroLanzado = false;
 
-
     public GameObject[] pajarosegundo;
-
 
     public float maxSpringRange = 1.35f;
     public Vector2 camInitialPos = new Vector2(0, 0);
@@ -55,20 +52,25 @@ public class pajarolanzamiento : MonoBehaviour
     private float timerToFinish;
     public float timeToFinish = 5;
 
-    public enum habilidadespecial { ninguno,crecer };
+    public enum habilidadespecial { ninguno, crecer };
 
     public habilidadespecial especial;
 
     private float tiempoUltimoPajaroQuieto; // Variable para el tiempo que lleva el último pájaro quieto
 
+    public AudioClip tirarClip;
+    public AudioClip lanzamientoClip;
+    public AudioClip colisionClip;
+    public AudioClip victoriaClip;
+    public AudioClip derrotaClip;
+    public AudioSource audioSource;
+
     private void Start()
     {
-        if (GameObject.FindGameObjectsWithTag("pivote").Length>0)
+        if (GameObject.FindGameObjectsWithTag("pivote").Length > 0)
         {
             pivote = GameObject.FindGameObjectsWithTag("pivote")[0].GetComponent<Rigidbody2D>();
-
         }
-       
 
         sehalanzado = false;
         hatocado = false;
@@ -80,7 +82,8 @@ public class pajarolanzamiento : MonoBehaviour
         bolaSprintJoint = GetComponent<SpringJoint2D>();
 
         controladorInterfaz = FindObjectOfType<interfazController>();
-        //bolaSprintJoint.connectedBody = pivote;
+
+        audioSource = GetComponent<AudioSource>();
 
         initialPosition = transform.position;
         escalaInicial = transform.localScale;
@@ -95,7 +98,6 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log("hola");
         if (sehalanzado == true)
         {
             CheckFullStop();
@@ -104,12 +106,12 @@ public class pajarolanzamiento : MonoBehaviour
             {
                 hatocado = true;
                 ataqueespecial();
+
                 if (!ultimoPajaroLanzado)
                 {
-                    
+                    audioSource.PlayOneShot(tirarClip);
                 }
             }
-
         }
 
         if (bolaRigidbody == null || juegoDetenido)
@@ -117,10 +119,10 @@ public class pajarolanzamiento : MonoBehaviour
 
         if (!Touchscreen.current.primaryTouch.press.isPressed)
         {
-            Debug.Log("prueba");
             if (estaArrastrando)
             {
                 LanzarBola();
+                audioSource.PlayOneShot(lanzamientoClip);
             }
 
             estaArrastrando = false;
@@ -130,14 +132,11 @@ public class pajarolanzamiento : MonoBehaviour
         estaArrastrando = true;
         bolaRigidbody.isKinematic = true;
 
-
         Vector2 posicionTocar = Touchscreen.current.primaryTouch.position.ReadValue();
         Vector3 posicionMundo = camara.ScreenToWorldPoint(posicionTocar);
 
         Vector3 distance = posicionMundo - pivote.transform.position;
         distance.z = 0;
-
-
 
         if (distance.magnitude > maxSpringRange)
         {
@@ -145,11 +144,9 @@ public class pajarolanzamiento : MonoBehaviour
             dis = dis.normalized * maxSpringRange;
 
             distance = distance.normalized * maxSpringRange;
-
         }
+
         bolaRigidbody.position = distance + pivote.transform.position;
-
-
     }
 
     private void LanzarBola()
@@ -181,33 +178,27 @@ public class pajarolanzamiento : MonoBehaviour
             camara.transform.position = new Vector3(camInitialPos.x, camInitialPos.y, -12.1f);
             camara = null;
         }
-
     }
 
     private void CheckFullStop()
     {
         timerToFinish -= Time.deltaTime;
+
         if (timerToFinish <= 0f)
         {
             CamaraToNormal();
+
             if (!haGanado)
             {
                 if (datosJuego.VidasExtras <= 0)
                 {
-                    //si quiero que aparezca cuando los mate a todos
-                    //FinJuego(false);
-
-                    // si quiero    ue aparezca con matar a uno
-                    if (datosJuego.Puntuacion>0)
+                    if (datosJuego.Puntuacion > 0)
                     {
                         FinJuego(true);
-
                     }
                     else
                     {
-
                         FinJuego(false);
-
                     }
                 }
                 else
@@ -217,7 +208,6 @@ public class pajarolanzamiento : MonoBehaviour
             }
 
             this.enabled = false;
-
         }
     }
 
@@ -233,56 +223,46 @@ public class pajarolanzamiento : MonoBehaviour
 
     public void ataqueespecial()
     {
-
-        switch(especial)
+        switch (especial)
         {
             case habilidadespecial.ninguno:
                 break;
             case habilidadespecial.crecer:
-                // Aumentar el tamaño del pájaro si no ha alcanzado el tamaño máximo
                 if (transform.localScale.x < escalaMaxima && transform.localScale.y < escalaMaxima)
                 {
                     Vector3 nuevaEscala = transform.localScale * factorEscala;
                     transform.localScale = nuevaEscala;
                 }
                 break;
-
         }
-
-
     }
 
     private void RespawnBola()
     {
-        GameObject bola= null;
+        GameObject bola = null;
 
-
-        if (datosJuego.VidasExtras==1)
+        if (datosJuego.VidasExtras == 1)
         {
-
-             bola = Instantiate(pajarosegundo[1], initialPosition, Quaternion.identity);
-
+            bola = Instantiate(pajarosegundo[1], initialPosition, Quaternion.identity);
         }
         else
         {
-
-             bola = Instantiate(pajarosegundo[0], initialPosition, Quaternion.identity);
+            bola = Instantiate(pajarosegundo[0], initialPosition, Quaternion.identity);
         }
 
-     
         Rigidbody2D nuevaBolaRigidbody = bola.GetComponent<Rigidbody2D>();
         SpringJoint2D nuevaBolaSprintJoint = bola.GetComponent<SpringJoint2D>();
         nuevaBolaRigidbody.isKinematic = true;
         nuevaBolaSprintJoint.connectedBody = pivote;
         bola.transform.localScale = escalaInicial;
-        
+
         pajaros.Add(bola);
         puedeCrecer = false;
 
         if (datosJuego.VidasExtras <= 0 && datosJuego.numeroDeCerdos > 0)
         {
             ultimoPajaroLanzado = true;
-            tiempoUltimoPajaroQuieto = Time.time; // Guardar el tiempo en el que el último pájaro se queda quieto
+            tiempoUltimoPajaroQuieto = Time.time;
         }
     }
 
@@ -298,19 +278,18 @@ public class pajarolanzamiento : MonoBehaviour
             PlayerPrefs.Save();
 
             MostrarPantallaVictoriaDerrota(true);
+            audioSource.PlayOneShot(victoriaClip); // Reproducir sonido de victoria
         }
         else
         {
             MostrarPantallaVictoriaDerrota(false);
+            audioSource.PlayOneShot(derrotaClip); // Reproducir sonido de derrota
         }
 
         Time.timeScale = 0;
     }
-
-
     private void MostrarPantallaVictoriaDerrota(bool victoria)
     {
-
         if (victoria)
         {
             if (ultimoPajaroLanzado)
@@ -319,25 +298,24 @@ public class pajarolanzamiento : MonoBehaviour
             }
             else
             {
-                //controladorInterfaz.MostrarPantallaVictoria();
+                controladorInterfaz.MostrarPantallaVictoria();
             }
-            controladorInterfaz.MostrarPantallaVictoria();
         }
         else
         {
             controladorInterfaz.MostrarPantallaDerrota();
+           
         }
     }
-
 
     private void LateUpdate()
     {
-        // Comprobar si el último pájaro lanzado está quieto y mostrar la pantalla de derrota si se cumple el tiempo límite
         if (ultimoPajaroLanzado && Time.time - tiempoUltimoPajaroQuieto >= tiempoFinJuego)
         {
-            //FinJuegoSinVictoria();
+            // FinJuegoSinVictoria();
         }
     }
+
     public void ReiniciarNivel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
