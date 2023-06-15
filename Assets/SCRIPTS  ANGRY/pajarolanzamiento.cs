@@ -85,6 +85,7 @@ public class pajarolanzamiento : MonoBehaviour
 
         audioSource = GetComponent<AudioSource>();
 
+
         initialPosition = transform.position;
         escalaInicial = transform.localScale;
 
@@ -94,6 +95,7 @@ public class pajarolanzamiento : MonoBehaviour
         timerToFinish = timeToFinish;
 
         cerdosRestantes = GameObject.FindGameObjectsWithTag("cerdo").Length;
+
     }
 
     private void Update()
@@ -295,11 +297,13 @@ public class pajarolanzamiento : MonoBehaviour
             PlayerPrefs.Save();
 
             MostrarPantallaVictoriaDerrota(true);
+           
             audioSource.PlayOneShot(victoriaClip); // Reproducir sonido de victoria
         }
         else
         {
             MostrarPantallaVictoriaDerrota(false);
+           
             audioSource.PlayOneShot(derrotaClip); // Reproducir sonido de derrota
         }
 

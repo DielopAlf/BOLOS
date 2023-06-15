@@ -23,6 +23,7 @@ public class interfazController : MonoBehaviour
     public TextMeshProUGUI victoriaText;
 
     public TextMeshProUGUI PuntosTxt;
+    public TextMeshProUGUI VidasTxt; // Nuevo campo para el contador de vidas
 
     public ControlDatosjuego datosJuego;
     private bool partidaTerminada = false;
@@ -37,7 +38,9 @@ public class interfazController : MonoBehaviour
         }
         else
         {
-            CrearVidasSprites();
+          //  CrearVidasSprites();
+            ActualizarPuntuacionActual(datosJuego.Puntuacion);
+            ActualizarContadorVidas(); // Actualizar el contador de vidas al iniciar
         }
 
     }
@@ -48,6 +51,7 @@ public class interfazController : MonoBehaviour
         {
             datosJuego.VidasExtras = vidas - 1;
             ActualizarVidasSprites();
+            ActualizarContadorVidas(); // Actualizar el contador de vidas al cambiar
         }
     }
 
@@ -65,13 +69,15 @@ public class interfazController : MonoBehaviour
                 }
                 else
                 {
-                    Debug.LogError("No hay suficientes sprites de vida para eliminar.");
+                   // Debug.LogError("No hay suficientes sprites de vida para eliminar.");
                 }
             }
             else
             {
                 MostrarPantallaDerrota();
             }
+
+            ActualizarContadorVidas(); // Actualizar el contador de vidas al perder una vida
         }
     }
 
@@ -125,7 +131,7 @@ public class interfazController : MonoBehaviour
         }
         else
         {
-            Debug.LogError("El contenedor de vidas o el prefab del sprite de vida no están asignados.");
+           // Debug.LogError("El contenedor de vidas o el prefab del sprite de vida no están asignados.");
         }
     }
 
@@ -144,5 +150,11 @@ public class interfazController : MonoBehaviour
     public void ActualizarPuntuacionActual(int puntuacion)
     {
         PuntosTxt.text = "Puntuación: " + puntuacion.ToString();
+    }
+
+    private void ActualizarContadorVidas()
+    {
+        int vidasRestantes = datosJuego.VidasExtras + 1;
+        VidasTxt.text = "Vidas: " + vidasRestantes.ToString();
     }
 }
