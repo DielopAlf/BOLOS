@@ -11,11 +11,16 @@ public class enemigocontrol : MonoBehaviour
 
     private interfazController interfazController; // Referencia al script "interfazController"
     private ControlDatosjuego datosJuego; // Referencia al script "ControlDatosjuego"
-
+    public AudioClip choqueClip;
+    public AudioSource audioSource;
     private void Start()
     {
         interfazController = FindObjectOfType<interfazController>(); // Obtener una referencia al script "interfazController"
         datosJuego = FindObjectOfType<ControlDatosjuego>(); // Obtener una referencia al script "ControlDatosjuego"
+                                                            // audioSource = GetComponent<AudioSource>();
+        //choqueClip = audioSource.clip;
+       // Debug.Log("Audio clip length : " + audioSource.clip.length);
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -26,7 +31,12 @@ public class enemigocontrol : MonoBehaviour
 
             if (disparosRecibidos >= disparosNecesarios)
             {
-                Destroy(gameObject);
+               // audioSource.PlayOneShot(choqueClip);
+               
+
+                Destroy(gameObject,0.5f);
+                //Debug.Log("Audio clip length : " + audioSource.clip.length);
+
                 datosJuego.numeroDeCerdos--;
                 datosJuego.Puntuacion += datosJuego.puntosPorColision;
                 interfazController.ActualizarPuntuacionActual(datosJuego.Puntuacion);

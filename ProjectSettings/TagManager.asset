@@ -9,6 +9,7 @@ TagManager:
   - cerdo
   - pared
   - pivote
+  - Choque
   layers:
   - Default
   - TransparentFX

@@ -175,6 +175,12 @@ MonoBehaviour:
   camSiguiendoPajaroZoom: 3.5
   timeToFinish: 5
   especial: 0
+  tirarClip: {fileID: 0}
+  lanzamientoClip: {fileID: 8300000, guid: 6a000b59d20238b419f14ce1c1b9f158, type: 3}
+  colisionClip: {fileID: 8300000, guid: fda92f479c23b3c42b26c68dc19b59f6, type: 3}
+  victoriaClip: {fileID: 8300000, guid: 0258b06da3205734a85ee6b59bccbe18, type: 3}
+  derrotaClip: {fileID: 8300000, guid: cf96572bc9ced6941b7a117f2cc4e17a, type: 3}
+  audioSource: {fileID: 4758398169298465915}
 --- !u!82 &4758398169298465915
 AudioSource:
   m_ObjectHideFlags: 0

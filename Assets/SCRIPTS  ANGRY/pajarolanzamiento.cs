@@ -148,8 +148,25 @@ public class pajarolanzamiento : MonoBehaviour
 
         bolaRigidbody.position = distance + pivote.transform.position;
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Pajaro")
+        {
+           
+            audioSource.PlayOneShot(colisionClip);
+        }
+        else if (collision.gameObject.tag == "Choque")
+        {
+            
+            audioSource.PlayOneShot(colisionClip);
+        }
+        else if (collision.gameObject.tag == "pared")
+        {
 
-    private void LanzarBola()
+            audioSource.PlayOneShot(colisionClip);
+        }
+    }
+        private void LanzarBola()
     {
         sehalanzado = true;
 
