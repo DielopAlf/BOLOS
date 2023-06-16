@@ -77,8 +77,9 @@ public class interfazController : MonoBehaviour
                 MostrarPantallaDerrota();
             }
 
-            ActualizarContadorVidas(); // Actualizar el contador de vidas al perder una vida
+           
         }
+        ActualizarContadorVidas(); // Actualizar el contador de vidas al perder una vida
     }
 
     public void MostrarPantallaVictoria()
@@ -91,7 +92,7 @@ public class interfazController : MonoBehaviour
             derrota.SetActive(false);
             puntuacionfinal.text = "Puntuación: " + datosJuego.Puntuacion.ToString();
             puntuacionrecord.text = "Record: " + PlayerPrefs.GetInt("Record" + SceneManager.GetActiveScene().name, 0).ToString();
-            victoriaText.text = "¡HAS GANADO!";
+            victoriaText.text = "¡Victoria!";
         }
     }
 

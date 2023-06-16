@@ -65,6 +65,12 @@ public class pajarolanzamiento : MonoBehaviour
     public AudioClip derrotaClip;
     public AudioSource audioSource;
 
+
+
+  //  public AudioClip musicaClip;
+    public AudioSource musicsource;
+
+
     private void Start()
     {
         if (GameObject.FindGameObjectsWithTag("pivote").Length > 0)
@@ -84,6 +90,9 @@ public class pajarolanzamiento : MonoBehaviour
         controladorInterfaz = FindObjectOfType<interfazController>();
 
         audioSource = GetComponent<AudioSource>();
+
+
+        musicsource = GameObject.Find("controladorsonido").GetComponent<AudioSource>();
 
 
         initialPosition = transform.position;
@@ -297,14 +306,20 @@ public class pajarolanzamiento : MonoBehaviour
             PlayerPrefs.Save();
 
             MostrarPantallaVictoriaDerrota(true);
-           
+
+            
+
             audioSource.PlayOneShot(victoriaClip); // Reproducir sonido de victoria
+            musicsource.Stop();
         }
         else
         {
             MostrarPantallaVictoriaDerrota(false);
+
            
+
             audioSource.PlayOneShot(derrotaClip); // Reproducir sonido de derrota
+            musicsource.Stop();
         }
 
         Time.timeScale = 0;
