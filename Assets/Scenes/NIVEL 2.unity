@@ -2769,9 +2769,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.010366874}
   serializedVersion: 2
-  m_Radius: 1.1953125
+  m_Radius: 0.87213856
 --- !u!114 &603642584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2799,9 +2799,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.011488428, y: -0.00076864543}
+  m_Offset: {x: 0.0049364297, y: -0.012561879}
   serializedVersion: 2
-  m_Radius: 1.2060331
+  m_Radius: 0.8691782
 --- !u!50 &603642586
 Rigidbody2D:
   serializedVersion: 4
@@ -2883,7 +2883,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 603642582}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.85, y: 0.4, z: 0}
+  m_LocalPosition: {x: 3.85, y: 0.208, z: 0}
   m_LocalScale: {x: 0.40889502, y: 0.40889502, z: 0.40889502}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6599,7 +6599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c81d2a18ba3c024fbd8fe1d16434ad0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tiempoQuitarSprintJoin: 0.15
+  tiempoQuitarSprintJoin: 0.12
   tiempoFinJuego: 0
   tiempoEsperaPantallaVictoriaDerrota: 1
   vidasExtras: 2
@@ -6613,7 +6613,7 @@ MonoBehaviour:
   maxSpringRange: 1.35
   camInitialPos: {x: 0, y: 0}
   camInitialSize: 5
-  camSiguiendoPajaroZoom: 2.35
+  camSiguiendoPajaroZoom: 3.5
   timeToFinish: 5
   especial: 0
   tirarClip: {fileID: 0}
