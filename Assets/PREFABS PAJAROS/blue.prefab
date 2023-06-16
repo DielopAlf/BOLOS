@@ -161,7 +161,7 @@ MonoBehaviour:
   tiempoQuitarSprintJoin: 0.12
   tiempoFinJuego: 0
   tiempoEsperaPantallaVictoriaDerrota: 1
-  vidasExtras: 4
+  vidasExtras: 1
   respawnDelay: 2
   nivel: 1
   factorEscala: 2
@@ -181,6 +181,7 @@ MonoBehaviour:
   victoriaClip: {fileID: 8300000, guid: 0258b06da3205734a85ee6b59bccbe18, type: 3}
   derrotaClip: {fileID: 8300000, guid: cf96572bc9ced6941b7a117f2cc4e17a, type: 3}
   audioSource: {fileID: 4758398169298465915}
+  musicsource: {fileID: 0}
 --- !u!82 &4758398169298465915
 AudioSource:
   m_ObjectHideFlags: 0

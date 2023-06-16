@@ -155,7 +155,7 @@ public class interfazController : MonoBehaviour
 
     private void ActualizarContadorVidas()
     {
-        int vidasRestantes = datosJuego.VidasExtras + 1;
+        int vidasRestantes = datosJuego.VidasExtras;
         VidasTxt.text = "Vidas: " + vidasRestantes.ToString();
     }
 }

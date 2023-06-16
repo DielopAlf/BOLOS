@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
-using TMPro;
-using UnityEngine.UI;
-using Unity.VisualScripting;
+
+
 
 public class pajarolanzamiento : MonoBehaviour
 {
@@ -14,7 +13,7 @@ public class pajarolanzamiento : MonoBehaviour
     public float tiempoFinJuego;
     public float tiempoEsperaPantallaVictoriaDerrota;
 
-    public int vidasExtras = 3;
+    public int vidasExtras = 2;
     public float respawnDelay = 2f;
 
     private Camera camara;
@@ -246,7 +245,7 @@ public class pajarolanzamiento : MonoBehaviour
 
         datosJuego.VidasExtras--;
 
-        controladorInterfaz.PerderVida();
+        
     }
 
     public void ataqueespecial()
@@ -267,6 +266,7 @@ public class pajarolanzamiento : MonoBehaviour
 
     private void RespawnBola()
     {
+        controladorInterfaz.PerderVida();
         GameObject bola = null;
 
         if (datosJuego.VidasExtras == 1)
